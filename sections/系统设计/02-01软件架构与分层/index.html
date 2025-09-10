@@ -1129,10 +1129,39 @@ SMP全称Symmetric Multiprocessing，即多处理器系统：多个处理器核�
 <span class="w">                                            </span><span class="n">beken_thread_arg_t</span><span class="w"> </span><span class="n">arg</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div>
 
-<p>以上代表创建具有亲和性的新线程，亲和性代表第二个参数，即指定到某一个CPU，为-1表示所有核心。而上述LVGL创建的线程，并没有创建在SMP中，区别在SRAM中动态创建。可通过代码中具体实现比较各个创建线程方式的使用。</p>
+<p>以上代表创建具有亲和性的新线程，亲和性代表第二个参数，即指定到某一个CPU，为-1表示所有核心。而上述LVGL创建的线程，封装了此API，并指定到CPU1。可通过代码中具体实现比较各个创建线程方式的使用。</p>
 <ul>
-<li></li>
+<li>初始化FIFO队列，同其它组件一样，线程也需要初始化，如下是此API函数定义，参数包括指向需要初始化队列的指针，队列名称，队列中对象的字节大小，及队列深度。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="n">bk_err_t</span><span class="w"> </span><span class="n">rtos_init_queue</span><span class="p">(</span><span class="w"> </span><span class="n">beken_queue_t</span><span class="o">*</span><span class="w"> </span><span class="n">queue</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="nb">char</span><span class="o">*</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">uint32_t</span><span class="w"> </span><span class="n">message_size</span><span class="p">,</span><span class="w"> </span><span class="n">uint32_t</span><span class="w"> </span><span class="n">number_of_messages</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">__maybe_unused_var</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">queue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xQueueCreate</span><span class="p">(</span><span class="w"> </span><span class="n">number_of_messages</span><span class="p">,</span><span class="w"> </span><span class="n">message_size</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NULL</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">kGeneralErr</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">kNoErr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>在上述创建LVGL线程前，同样需要初始化LVGL队列，LVGL队列深度为20，即队列里最多20个对象。在初始化队列和创建对象的返回值是同一个局部变量，最终作为media_ui_task_init()函数返回值返回，并包含了异常处理。</p>
+<div class="codehilite"><pre><span></span><code>ret = rtos_init_queue(&amp;media_ui_msg_que,
+                                &quot;media_ui_msg_que&quot;,
+                                sizeof(media_msg_t),
+                                20);
+</code></pre></div>
+
+<p>LVGL线程初始化和其它LCD、UV多媒体初始化在一层初始化中，又包含于media_major_mailbox_message_handle()中，创建了一个优先级为4的线程，不指向CPU，这就意味着指向了每一个CPU。</p>
+<p>从LVGL中断函数出发，一直向上寻找接口，发现他们的父级是media_service_init()接口，这个接口在主函数中，未规定在某个CPU中，即代表中间层的初始化在每个CPU都有作用。</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">TD</span><span class="p">;</span>
+<span class="w">    </span><span class="n">A</span><span class="o">--&gt;</span><span class="n">B</span><span class="p">;</span>
+<span class="w">    </span><span class="n">A</span><span class="o">--&gt;</span><span class="n">C</span><span class="p">;</span>
+<span class="w">    </span><span class="n">B</span><span class="o">--&gt;</span><span class="n">D</span><span class="p">;</span>
+<span class="w">    </span><span class="n">C</span><span class="o">--&gt;</span><span class="n">D</span><span class="p">;</span>
+</code></pre></div>
+
 <p>单核单片机可能难以同时满足图形渲染和业务逻辑处理的需求。
 硬件上需要说明总线仲裁、时钟同步等关键点；软件层面则要重点介绍实时操作系统的多核调度机制。</p>
 
