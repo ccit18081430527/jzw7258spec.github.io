@@ -1,240 +1,123 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-        <meta name="author" content="技术文档团队">
-      
-      
-        <link rel="canonical" href="https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/02-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
-      
-      
-        <link rel="prev" href="../02-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/">
-      
-      
-        <link rel="next" href="../02-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
-      
-      
-      <link rel="icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
-    
-    
-      
-        <title>硬件接口开发 - JZW软件规格书</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<!DOCTYPE doctype html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../../css/extra.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#_1" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="技术文档团队" name="author"/>
+<link href="https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/02-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" rel="canonical"/>
+<link href="../02-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/" rel="prev"/>
+<link href="../02-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" rel="next"/>
+<link href="../../../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.16" name="generator"/>
+<title>硬件接口开发 - JZW软件规格书</title>
+<link href="../../../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=LXGW+WenKai:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="green" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
-    
-    
-      
-
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="JZW软件规格书" class="md-header__button md-logo" aria-label="JZW软件规格书" data-md-component="logo">
-      
-  <img src="../../../img/favicon.ico" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="JZW软件规格书" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="JZW软件规格书">
+<img alt="logo" src="../../../img/favicon.ico"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             JZW软件规格书
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               硬件接口开发
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="deep-green" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-      <div class="md-header__option">
-  <div class="md-select">
-    
-    <button class="md-header__button md-icon" aria-label="Select language">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
-    </button>
-    <div class="md-select__inner">
-      <ul class="md-select__list">
-        
-          <li class="md-select__item">
-            <a href="/" hreflang="zh" class="md-select__link">
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Select language" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/" hreflang="zh">
               楷体
             </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+</li>
+</ul>
 </div>
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-      
-    
-    
-  </nav>
-  
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
         
   
   
@@ -243,956 +126,546 @@
   首页
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
           
   
   
   JZW7258
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
           
   
   
   相关资料
 
         </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="JZW软件规格书" class="md-nav__button md-logo" aria-label="JZW软件规格书" data-md-component="logo">
-      
-  <img src="../../../img/favicon.ico" alt="logo">
-
-    </a>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="JZW软件规格书" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="JZW软件规格书">
+<img alt="logo" src="../../../img/favicon.ico"/>
+</a>
     JZW软件规格书
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
     首页
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle " id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
     JZW7258
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             JZW7258
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+<span class="md-ellipsis">
     快速入门
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-02%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-02%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/">
+<span class="md-ellipsis">
     成品展示
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle " id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
     系统设计
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
             系统设计
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/">
+<span class="md-ellipsis">
     软件架构与分层
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     硬件接口开发
     
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
     硬件接口开发
     
   </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
       开发板
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       原理图
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gpio" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio">
+<span class="md-ellipsis">
       GPIO
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GPIO">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#map-config" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="GPIO" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#map-config">
+<span class="md-ellipsis">
       MAP Config
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#gpio_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio_1">
+<span class="md-ellipsis">
       GPIO使用介绍
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#uart" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart">
+<span class="md-ellipsis">
       UART
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="UART">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="UART" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
       发包通路
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       收包通路
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
       应用场景
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#pwm" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pwm">
+<span class="md-ellipsis">
       PWM
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PWM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="PWM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
       初始化部分
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pwm_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pwm_1">
+<span class="md-ellipsis">
       设置PWM占空比参数
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#wifi" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wifi">
+<span class="md-ellipsis">
       WIFI
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WIFI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#station" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="WIFI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#station">
+<span class="md-ellipsis">
       station模式
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="station模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wifi_1" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="station模式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wifi_1">
+<span class="md-ellipsis">
       WiFi初始化:
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wifi_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wifi_2">
+<span class="md-ellipsis">
       WIFI配置：
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
       启动阶段：
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
       连接阶段：
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ip" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ip">
+<span class="md-ellipsis">
       获取IP地址
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
+<span class="md-ellipsis">
     屏幕接口开发
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+<span class="md-ellipsis">
     应用开发
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
+<span class="md-ellipsis">
+    产品
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle " id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
     相关资料
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             相关资料
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
+<span class="md-ellipsis">
     API
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-02PDF%E4%B8%8B%E8%BD%BD/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-02PDF%E4%B8%8B%E8%BD%BD/">
+<span class="md-ellipsis">
     PDF下载
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
       开发板
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       原理图
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gpio" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio">
+<span class="md-ellipsis">
       GPIO
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GPIO">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#map-config" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="GPIO" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#map-config">
+<span class="md-ellipsis">
       MAP Config
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#gpio_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio_1">
+<span class="md-ellipsis">
       GPIO使用介绍
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#uart" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart">
+<span class="md-ellipsis">
       UART
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="UART">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="UART" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
       发包通路
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       收包通路
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
       应用场景
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#pwm" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pwm">
+<span class="md-ellipsis">
       PWM
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PWM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="PWM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
       初始化部分
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pwm_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pwm_1">
+<span class="md-ellipsis">
       设置PWM占空比参数
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#wifi" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wifi">
+<span class="md-ellipsis">
       WIFI
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WIFI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#station" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="WIFI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#station">
+<span class="md-ellipsis">
       station模式
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="station模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wifi_1" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="station模式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wifi_1">
+<span class="md-ellipsis">
       WiFi初始化:
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wifi_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wifi_2">
+<span class="md-ellipsis">
       WIFI配置：
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
       启动阶段：
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
       连接阶段：
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ip" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ip">
+<span class="md-ellipsis">
       获取IP地址
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>JZW7258核心特点是BT和WIFI的相关驱动，两者应用强大而复杂。
 而其它基础外设驱动接口已封装完善，用户使用方便，按需求调用接口给定参数即可。
 下列对外设接口进行模块化详细说明</p>
-<h2 id="_2">开发板<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../image-3.png" /></p>
+<h2 id="_2">开发板<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p><img alt="alt text" src="../image-3.png"/></p>
 <ul>
 <li>1号接线端子：5V供电接口 + UART1通信端口 一体式</li>
 <li>2号接线端子：UART0，DEBUG烧录 + 调试打印信息 一体式</li>
 </ul>
-<h2 id="_3">原理图<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">原理图<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <ul>
 <li>MCU部分
-<img alt="alt text" src="../image.png" /></li>
+<img alt="alt text" src="../image.png"/></li>
 <li>LCD部分
-<img alt="alt text" src="../image-1.png" /></li>
+<img alt="alt text" src="../image-1.png"/></li>
 <li>TP部分
-<img alt="alt text" src="../image-2.png" /></li>
+<img alt="alt text" src="../image-2.png"/></li>
 <li>UART0部分
-<img alt="alt text" src="../image-4.png" /></li>
+<img alt="alt text" src="../image-4.png"/></li>
 <li>UART1部分
-<img alt="alt text" src="../image-5.png" /></li>
+<img alt="alt text" src="../image-5.png"/></li>
 </ul>
-<h2 id="gpio">GPIO<a class="headerlink" href="#gpio" title="Permanent link">&para;</a></h2>
+<h2 id="gpio">GPIO<a class="headerlink" href="#gpio" title="Permanent link">¶</a></h2>
 <p>BK7258有多达56个gpio，可以配置为输入或输出。所有gpio都与备用功能共享。一般情况，用户可根据以下步骤来使用GPIO：
 * 对照硬件原理图，找出程序中这些引脚是否启用，确认引脚一一对应。
 * 检查API返回值，确保没有ERR。</p>
-<h3 id="map-config">MAP Config<a class="headerlink" href="#map-config" title="Permanent link">&para;</a></h3>
+<h3 id="map-config">MAP Config<a class="headerlink" href="#map-config" title="Permanent link">¶</a></h3>
 <p>GPIO根据映射表GPIO_DEFAULT_DEV_CONFIG进行参数配置</p>
 <table>
 <thead>
@@ -1250,7 +723,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="gpio_1">GPIO使用介绍<a class="headerlink" href="#gpio_1" title="Permanent link">&para;</a></h3>
+<h3 id="gpio_1">GPIO使用介绍<a class="headerlink" href="#gpio_1" title="Permanent link">¶</a></h3>
 <ul>
 <li>用户根据开发板需求配置GPIO_DEFAULT_DEV_CONFIG表，譬如jzw7258工程下的config_cp1中就修改了该表的默认值，对于TP引脚修改了原有的GPIO使用，等于二次复用。(如果您想在程序运行期间更改某个 GPIO 的功能，可以使用 <span style="background-color: yellow;">gpio_dev_unmap()</span> 函数取消原有的映射，然后使用 gpio_dev_map() 函数进行新的映射。 GPIO外设初始化时会在gpio_hal.c的 gpio_hal_default_map_init（）函数里按照 GPIO_DEFAULT_DEV_CONFIG 表初始化GPIO（需要打开宏CONFIG_GPIO_DEFAULT_SET_SUPPORT，平台只会操作一次，后面以用户配置为准,如果没有开启该宏，则平台不会操作GPIO，GPIO默认值为高组态）)</li>
 <li>新建工程之后，每个CPU必须配置自己需要控制的GPIO,确保每个CPU管理自己的GPIO，注册相应的中断回调函数，确保程序按预期运行：
@@ -1258,7 +731,7 @@
   创建 usr_gpio_cfg.h 文件：在项目的合适位置创建 usr_gpio_cfg.h 头文件，并在该文件中定义你自定义的 GPIO_DEFAULT_DEV_CONFIG</li>
 <li>gpio_map.h文件中的map表，覆盖了所有GPIO的配置说明，如若和默认有不同的GPIO需在此处进行修改（比如下文会提到的PWM引脚）</li>
 </ul>
-<h2 id="uart">UART<a class="headerlink" href="#uart" title="Permanent link">&para;</a></h2>
+<h2 id="uart">UART<a class="headerlink" href="#uart" title="Permanent link">¶</a></h2>
 <p>UART分为DEBUG和通信，两者波特率皆115200。UART0作为DEBUG接口，有烧录工程和调试程序的作用。在程序对应位置加入打印信息，烧录后即可看到相关内容。根据原理图可知，UART0引脚对应：RX-GPIO10,TX-GPIO11,在驱动层已配置好用户无需修改；UART1引脚对应：RX-GPIO1,TX-GPIO0,同理已配置好。需要实现的现象是：电脑发给开发板什么数据，开发板将接收到的数据原样返回给电脑。采用sscom串口调试工具(若只查看串口数据可以用哦xshell)。无论采用什么方式实现，都需要配置好串口需要的参数，如下:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">uart_config_t</span><span class="w"> </span><span class="n">s_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="o">.</span><span class="n">baud_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_BAUD_RATE</span><span class="p">,</span><span class="w">   </span><span class="err">波特率配置</span><span class="mi">115200</span>
@@ -1269,16 +742,15 @@
 <span class="w">    </span><span class="o">.</span><span class="n">src_clk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_SRC_CLK</span><span class="p">,</span><span class="w">       </span><span class="err">时钟</span><span class="mi">26</span><span class="n">Mhz</span>
 <span class="p">};</span>
 </code></pre></div>
-
-<h4 id="_4">发包通路<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="_4">发包通路<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
 <p>bk_uart_write_bytes() 调用此接口进行数据发送</p>
-<h4 id="_5">收包通路<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h4 id="_5">收包通路<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
 <ul>
 <li>硬件收包： UART将接收包存放在硬件FIFO中，当包中数据超过上限时即溢出，产生RX中断。</li>
 <li>中断收包： UART在规定时间内没有收到包时，产生RX接收完成中断，软件进入中断接收处理中，硬件读取数据放入RX FIFO</li>
 <li>应用收报： 调用bk_uart_read_bytes() 接口接收数据，此时从RX FIFO中读取数据，到达一定时间立即返回接收到的数据，如若时间为0则代表立即返回数据。</li>
 </ul>
-<h3 id="_6">应用场景<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">应用场景<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <p>当前UART支持以下应用场景：</p>
 <ul>
 <li>默认UART中断流程：默认使用bk_uart_write_bytes()和bk_uart_read_bytes()处理收发包，满足大部分应用需求。</li>
@@ -1296,30 +768,29 @@
 <span class="w">    </span><span class="err">{</span>
 <span class="w">        </span><span class="nf">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UART_EXAMPLE_BUF_LEN</span><span class="p">;</span>
 <span class="w">    </span><span class="err">}</span>
-<span class="w">    </span><span class="n">BK_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;uart recv data :\r\n&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">BK_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="ss">"uart recv data :\r\n"</span><span class="p">);</span>
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="nc">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nf">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="err">{</span>
-<span class="w">        </span><span class="n">BK_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;data[%d]=0x%x\r\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">BK_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="ss">"data[%d]=0x%x\r\n"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
 <span class="w">    </span><span class="err">}</span>
 <span class="w">    </span><span class="n">uart_send_data</span><span class="p">(</span><span class="k">data</span><span class="p">,</span><span class="w"> </span><span class="nf">len</span><span class="p">);</span>
 </code></pre></div>
-
 <p>应用工程中引用串口时，需要打开宏CONFIG_UART1，具体配置详见IDK下的UART项目。</p>
-<h2 id="pwm">PWM<a class="headerlink" href="#pwm" title="Permanent link">&para;</a></h2>
+<h2 id="pwm">PWM<a class="headerlink" href="#pwm" title="Permanent link">¶</a></h2>
 <p>JZW7258开发板有PWM0和PWM1两组PWM开发器，PWM控制器下有3个TIM定时器，每个定时器有2个channel。因此，每个 PWM 控制器有6个 channel，共支持12个 channel，对应软件中的 PWM_ID_0 到 PWM_ID_11。PWM时钟源有26M和32M两种，常规选择26M时钟，则 PSC应配置为25。
 PWM本身的功能就是更改占空比值，可以实现调节背光或蜂鸣器此类带有PWM功能的设备，除正式设置占空比参数的流程外，还需要进行外设初始化相关操作，这是所有外设不可避免的主要环节。在进行正式操作之前，先要确认GPIO接口是否与硬件开发板对应正确，与上文GPIO章节对应所说，修改GPIO需在gpio_map.h文件中确认。发现默认PWM0的gpio为p8,而JZW7258开发板的PWM0对应为p7，故此修改即可。
 以调节背光的PWM0作为示例，代码流程如下：</p>
-<h3 id="_7">初始化部分<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">初始化部分<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <ul>
 <li>入口主函数PWM驱动初始化，调用bk_pwm_driver_init()。同UART，驱动初始化必须在调用其它PWM接口之前调用此API。</li>
 <li>在开始PWM流程前，先要进行ID初始化，这点和UART同理，调用bk_pwm_init()，配置参数调用 pwm_init_config_t init_config 结构体，重新初始化参数，这里配置PWM为100占空比，即上电后为满率，需要更改PWM的逻辑时再调用更改占空比的用户接口(具体见下文步骤)。</li>
 <li>与常规不同的是，初始化后的启动，需要启用中断才能生效，但这里不需要用户回调处理，同UART非阻塞处理的流程。由于初始化里启用了中断，需要关闭中断，故调用BK_LOG_ON_ERRbk_pwm_capture_stop()/bk_pwm_capture_start()函数。</li>
 </ul>
-<h3 id="pwm_1">设置PWM占空比参数<a class="headerlink" href="#pwm_1" title="Permanent link">&para;</a></h3>
+<h3 id="pwm_1">设置PWM占空比参数<a class="headerlink" href="#pwm_1" title="Permanent link">¶</a></h3>
 <ul>
 <li>已封装好函数接口，入口参数为用户需要设置的占空比值，调用user_pwm_set_backlight(uint32_t duty)函数即可</li>
 </ul>
-<h2 id="wifi">WIFI<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h2>
+<h2 id="wifi">WIFI<a class="headerlink" href="#wifi" title="Permanent link">¶</a></h2>
 <p>WiFi也可看做一个外设，故与UART和PWM有异曲同工之妙。
 * 支持三个虚拟接口：STA、AP、Monitor
 * 支持仅 station 模式、仅 AP 模式、station + AP 共存模式
@@ -1329,108 +800,65 @@ PWM本身的功能就是更改占空比值，可以实现调节背光或蜂鸣�
 * 支持 WPA、WPA2 及 WPA3 等加密方式
 * station 模式下支持低功耗休眠
 * 空中数据传输最高可达 20Mbits/s TCP 吞吐和 35Mbits/s UDP 吞吐</p>
-<h3 id="station">station模式<a class="headerlink" href="#station" title="Permanent link">&para;</a></h3>
+<h3 id="station">station模式<a class="headerlink" href="#station" title="Permanent link">¶</a></h3>
 <p>包含了初始化、配置、连接&amp;断开连接等各阶段的具体描述</p>
-<h4 id="wifi_1">WiFi初始化:<a class="headerlink" href="#wifi_1" title="Permanent link">&para;</a></h4>
+<h4 id="wifi_1">WiFi初始化:<a class="headerlink" href="#wifi_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>主任务入口调用 bk_event_init() 函数，以创建任务并初始化时间队列，此函数必须放在其它WIFI/BT接口函数之前。</li>
 <li>再调用 bk_netif_init() 函数，创建并初始化 Lwip 核心任务。</li>
 <li>调用 bk_wifi_init() 函数，创建 Wi-Fi 驱动程序任务，并初始化 Wi-Fi 驱动程序，其中包括：底层 MAC 软件、射频参数、wpa_supplicant 。</li>
 <li>主任务通过调用系统 API 创建应用程序任务。</li>
 </ul>
-<h4 id="wifi_2">WIFI配置：<a class="headerlink" href="#wifi_2" title="Permanent link">&para;</a></h4>
+<h4 id="wifi_2">WIFI配置：<a class="headerlink" href="#wifi_2" title="Permanent link">¶</a></h4>
 <ul>
 <li>调用 bk_wifi_sta_set_config() 函数配置参数，常规情况，用户传入AP名称和密码，必须再bk_wifi_sta_start() 开启之前调用。</li>
 </ul>
-<h4 id="_8">启动阶段：<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h4 id="_8">启动阶段：<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
 <ul>
 <li>调用 bk_wifi_sta_start() 函数启动WIFI,启用成功返回OK，可先调用bk_wifi_sta_stop()停止，再开启。</li>
 </ul>
-<h4 id="_9">连接阶段：<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<h4 id="_9">连接阶段：<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
 <ul>
 <li>调用bk_wifi_sta_connect() 函数连接WIFI，将启动内部扫描和连接流程</li>
 <li>成功发现AP后会上报成功标志</li>
 <li>连接成功后启动 DHCP 客户端服务，触发 DHCP 流程。</li>
 </ul>
-<h4 id="ip">获取IP地址<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h4>
+<h4 id="ip">获取IP地址<a class="headerlink" href="#ip" title="Permanent link">¶</a></h4>
 <ul>
 <li>启动 Lwip 的 DHCP 客户端获取 IP 地址</li>
 <li>触发IPV4，可以进行数据收发，如TCP/UDP。</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+</article>
+</div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
 </div>
-      
-        <div class="md-social">
-  
-    
-    
-    
-    
-    <a href="https://s1.imagehub.cc/images/2024/02/02/bb9ee71b03ee7a3b87caad5cc4bcebff.jpeg" target="_blank" rel="noopener" title="Wechat" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154m-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4m-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2M563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4m-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6m107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6"/></svg>
-    </a>
-  
-    
-    
-    
-    
-    <a href="https://t.me/wecowin" target="_blank" rel="noopener" title="telegram" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
-    </a>
-  
+<div class="md-social">
+<a class="md-social__link" href="https://s1.imagehub.cc/images/2024/02/02/bb9ee71b03ee7a3b87caad5cc4bcebff.jpeg" rel="noopener" target="_blank" title="Wechat">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154m-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4m-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2M563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4m-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6m107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6" fill="currentColor"></path></svg>
+</a>
+<a class="md-social__link" href="https://t.me/wecowin" rel="noopener" target="_blank" title="telegram">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z" fill="currentColor"></path></svg>
+</a>
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
-    
-    
-      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
+</body>
 </html>
