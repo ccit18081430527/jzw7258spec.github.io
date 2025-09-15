@@ -19,9 +19,10 @@
 <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="green" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -59,9 +60,7 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="deep-green" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
@@ -144,6 +143,17 @@
   相关资料
 
         </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+        
+  
+  
+    
+  
+  其它平台芯片介绍
+
+      </a>
 </li>
 </ul>
 </div>
@@ -267,6 +277,13 @@
 <nav aria-label="GPIO" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#gpio-map">
+<span class="md-ellipsis">
+      GPIO MAP
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#map-config">
 <span class="md-ellipsis">
       MAP Config
@@ -280,6 +297,31 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio_2">
+<span class="md-ellipsis">
+      GPIO应用案例
+    </span>
+</a>
+<nav aria-label="GPIO应用案例" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lcd">
+<span class="md-ellipsis">
+      驱动LCD，烧录程序后，屏幕背光有亮度即代表成功驱动屏幕，这里无关乎显示内容。
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tpdemoui">
+<span class="md-ellipsis">
+      驱动TP触摸，烧录demo后，保证触摸有效并且和UI界面点位一致，没有偏移和触摸失效的情况
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -290,6 +332,21 @@
     </span>
 </a>
 <nav aria-label="UART" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart0">
+<span class="md-ellipsis">
+      UART0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart1">
+<span class="md-ellipsis">
+      UART1
+    </span>
+</a>
+<nav aria-label="UART1" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
@@ -312,6 +369,23 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      1. 以第一种为例（非阻塞式），代码流程如下
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      2. 第二种为例（中断接收），代码流程如下
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -324,18 +398,36 @@
 <nav aria-label="PWM" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
+<a class="md-nav__link" href="#1_1">
 <span class="md-ellipsis">
-      初始化部分
+      1. 初始化部分
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pwm_1">
+<a class="md-nav__link" href="#2-pwm">
 <span class="md-ellipsis">
-      设置PWM占空比参数
+      2. 设置PWM占空比参数
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      3. 应用场景
+    </span>
+</a>
+<nav aria-label="3. 应用场景" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lvgl">
+<span class="md-ellipsis">
+      LVGL设计滑动条并显示进度条数值
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -357,42 +449,173 @@
 <nav aria-label="station模式" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wifi_1">
+<a class="md-nav__link" href="#1-wifi">
 <span class="md-ellipsis">
-      WiFi初始化:
+      1. WiFi初始化
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wifi_2">
+<a class="md-nav__link" href="#2-wifi">
 <span class="md-ellipsis">
-      WIFI配置：
+      2. WIFI配置
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
+<a class="md-nav__link" href="#3_1">
 <span class="md-ellipsis">
-      启动阶段：
+      3. 启动阶段
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
+<a class="md-nav__link" href="#4">
 <span class="md-ellipsis">
-      连接阶段：
+      4. 连接阶段
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ip">
+<a class="md-nav__link" href="#5-ip">
 <span class="md-ellipsis">
-      获取IP地址
+      5. 获取IP地址
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ap">
+<span class="md-ellipsis">
+      AP模式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wi-fi">
+<span class="md-ellipsis">
+      WI-FI扫描
+    </span>
+</a>
+<nav aria-label="WI-FI扫描" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_2">
+<span class="md-ellipsis">
+      1. 开启扫描
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_1">
+<span class="md-ellipsis">
+      2. 停止扫描
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3_2">
+<span class="md-ellipsis">
+      3. 获取扫描结果
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4_1">
+<span class="md-ellipsis">
+      4.释放扫描结果
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      5. 扫描类型
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#station_1">
+<span class="md-ellipsis">
+      Station连接场景
+    </span>
+</a>
+<nav aria-label="Station连接场景" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_3">
+<span class="md-ellipsis">
+      1. 扫描阶段
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_2">
+<span class="md-ellipsis">
+      2. 认证阶段
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3_3">
+<span class="md-ellipsis">
+      3. 关联阶段
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4_2">
+<span class="md-ellipsis">
+      4. 四次握手阶段
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      原因代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      蓝牙
+    </span>
+</a>
+<nav aria-label="蓝牙" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ble">
+<span class="md-ellipsis">
+      BLE 低功耗蓝牙
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bt">
+<span class="md-ellipsis">
+      BT 经典蓝牙
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dut">
+<span class="md-ellipsis">
+      DUT
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -418,14 +641,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
-<span class="md-ellipsis">
-    产品
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -464,6 +679,14 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -501,6 +724,13 @@
 <nav aria-label="GPIO" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#gpio-map">
+<span class="md-ellipsis">
+      GPIO MAP
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#map-config">
 <span class="md-ellipsis">
       MAP Config
@@ -514,6 +744,31 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio_2">
+<span class="md-ellipsis">
+      GPIO应用案例
+    </span>
+</a>
+<nav aria-label="GPIO应用案例" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lcd">
+<span class="md-ellipsis">
+      驱动LCD，烧录程序后，屏幕背光有亮度即代表成功驱动屏幕，这里无关乎显示内容。
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tpdemoui">
+<span class="md-ellipsis">
+      驱动TP触摸，烧录demo后，保证触摸有效并且和UI界面点位一致，没有偏移和触摸失效的情况
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -524,6 +779,21 @@
     </span>
 </a>
 <nav aria-label="UART" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart0">
+<span class="md-ellipsis">
+      UART0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart1">
+<span class="md-ellipsis">
+      UART1
+    </span>
+</a>
+<nav aria-label="UART1" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
@@ -546,6 +816,23 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      1. 以第一种为例（非阻塞式），代码流程如下
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      2. 第二种为例（中断接收），代码流程如下
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -558,18 +845,36 @@
 <nav aria-label="PWM" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
+<a class="md-nav__link" href="#1_1">
 <span class="md-ellipsis">
-      初始化部分
+      1. 初始化部分
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pwm_1">
+<a class="md-nav__link" href="#2-pwm">
 <span class="md-ellipsis">
-      设置PWM占空比参数
+      2. 设置PWM占空比参数
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      3. 应用场景
+    </span>
+</a>
+<nav aria-label="3. 应用场景" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lvgl">
+<span class="md-ellipsis">
+      LVGL设计滑动条并显示进度条数值
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -591,42 +896,173 @@
 <nav aria-label="station模式" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wifi_1">
+<a class="md-nav__link" href="#1-wifi">
 <span class="md-ellipsis">
-      WiFi初始化:
+      1. WiFi初始化
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wifi_2">
+<a class="md-nav__link" href="#2-wifi">
 <span class="md-ellipsis">
-      WIFI配置：
+      2. WIFI配置
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
+<a class="md-nav__link" href="#3_1">
 <span class="md-ellipsis">
-      启动阶段：
+      3. 启动阶段
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
+<a class="md-nav__link" href="#4">
 <span class="md-ellipsis">
-      连接阶段：
+      4. 连接阶段
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ip">
+<a class="md-nav__link" href="#5-ip">
 <span class="md-ellipsis">
-      获取IP地址
+      5. 获取IP地址
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ap">
+<span class="md-ellipsis">
+      AP模式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wi-fi">
+<span class="md-ellipsis">
+      WI-FI扫描
+    </span>
+</a>
+<nav aria-label="WI-FI扫描" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_2">
+<span class="md-ellipsis">
+      1. 开启扫描
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_1">
+<span class="md-ellipsis">
+      2. 停止扫描
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3_2">
+<span class="md-ellipsis">
+      3. 获取扫描结果
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4_1">
+<span class="md-ellipsis">
+      4.释放扫描结果
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      5. 扫描类型
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#station_1">
+<span class="md-ellipsis">
+      Station连接场景
+    </span>
+</a>
+<nav aria-label="Station连接场景" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_3">
+<span class="md-ellipsis">
+      1. 扫描阶段
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_2">
+<span class="md-ellipsis">
+      2. 认证阶段
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3_3">
+<span class="md-ellipsis">
+      3. 关联阶段
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4_2">
+<span class="md-ellipsis">
+      4. 四次握手阶段
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      原因代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      蓝牙
+    </span>
+</a>
+<nav aria-label="蓝牙" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ble">
+<span class="md-ellipsis">
+      BLE 低功耗蓝牙
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bt">
+<span class="md-ellipsis">
+      BT 经典蓝牙
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dut">
+<span class="md-ellipsis">
+      DUT
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -662,9 +1098,96 @@
 <img alt="alt text" src="../image-5.png"/></li>
 </ul>
 <h2 id="gpio">GPIO<a class="headerlink" href="#gpio" title="Permanent link">¶</a></h2>
-<p>BK7258有多达56个gpio，可以配置为输入或输出。所有gpio都与备用功能共享。一般情况，用户可根据以下步骤来使用GPIO：
-* 对照硬件原理图，找出程序中这些引脚是否启用，确认引脚一一对应。
-* 检查API返回值，确保没有ERR。</p>
+<p>BK7258有多达56个gpio，可以配置为输入或输出。所有gpio都与备用功能共享。一般情况，用户可根据以下步骤来使用GPIO：</p>
+<ul>
+<li>对照硬件原理图，找出程序中这些引脚是否启用，确认引脚一一对应。</li>
+<li>检查API返回值，确保没有ERR。</li>
+</ul>
+<h3 id="gpio-map">GPIO MAP<a class="headerlink" href="#gpio-map" title="Permanent link">¶</a></h3>
+<p>对照原理图，IO编号与功能对应说明</p>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>GPIO</th>
+<th></th>
+<th>Functions</th>
+<th>GPIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART0_TX</td>
+<td>GPIO11</td>
+<td></td>
+<td>RGB_DISP(SPI_GPIO_RST)</td>
+<td>GPIO15</td>
+</tr>
+<tr>
+<td>UART0-RX</td>
+<td>GPIO10</td>
+<td></td>
+<td>RGB_DE</td>
+<td>GPIO16</td>
+</tr>
+<tr>
+<td>UART1_TX</td>
+<td>GPIO0</td>
+<td></td>
+<td>RGB_CLK</td>
+<td>GPIO14</td>
+</tr>
+<tr>
+<td>UART1_RX</td>
+<td>GPIO1</td>
+<td></td>
+<td>I2C1_SCL</td>
+<td>GPIO38</td>
+</tr>
+<tr>
+<td>SPI1_SCK(SPI_GPIO_CLK)</td>
+<td>GPIO2</td>
+<td></td>
+<td>I2C1_SDA</td>
+<td>GPIO39</td>
+</tr>
+<tr>
+<td>SPI1_CS(SPI_GPIO_CSX)</td>
+<td>GPIO3</td>
+<td></td>
+<td>TP_INT</td>
+<td>GPIO28</td>
+</tr>
+<tr>
+<td>SPI1_MOSI(SPI_GPIO_SDA)</td>
+<td>GPIO4</td>
+<td></td>
+<td>TP_RST</td>
+<td>GPIO29</td>
+</tr>
+<tr>
+<td>SPI1_MISO</td>
+<td>GPIO5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BEEP</td>
+<td>GPIO9</td>
+<td></td>
+<td>AUDIO_EN</td>
+<td>GPIO8</td>
+</tr>
+<tr>
+<td>LCD_PWM0</td>
+<td>GPIO7</td>
+<td></td>
+<td>ADC_KEY</td>
+<td>GPIO12</td>
+</tr>
+</tbody>
+</table>
 <h3 id="map-config">MAP Config<a class="headerlink" href="#map-config" title="Permanent link">¶</a></h3>
 <p>GPIO根据映射表GPIO_DEFAULT_DEV_CONFIG进行参数配置</p>
 <table>
@@ -725,44 +1248,139 @@
 </table>
 <h3 id="gpio_1">GPIO使用介绍<a class="headerlink" href="#gpio_1" title="Permanent link">¶</a></h3>
 <ul>
-<li>用户根据开发板需求配置GPIO_DEFAULT_DEV_CONFIG表，譬如jzw7258工程下的config_cp1中就修改了该表的默认值，对于TP引脚修改了原有的GPIO使用，等于二次复用。(如果您想在程序运行期间更改某个 GPIO 的功能，可以使用 <span style="background-color: yellow;">gpio_dev_unmap()</span> 函数取消原有的映射，然后使用 gpio_dev_map() 函数进行新的映射。 GPIO外设初始化时会在gpio_hal.c的 gpio_hal_default_map_init（）函数里按照 GPIO_DEFAULT_DEV_CONFIG 表初始化GPIO（需要打开宏CONFIG_GPIO_DEFAULT_SET_SUPPORT，平台只会操作一次，后面以用户配置为准,如果没有开启该宏，则平台不会操作GPIO，GPIO默认值为高组态）)</li>
+<li>用户根据开发板需求配置GPIO_DEFAULT_DEV_CONFIG表，譬如jzw7258工程下的config_cp1中就修改了该表的默认值，对于TP引脚修改了原有的GPIO使用，等于二次复用。(如果您想在程序运行期间更改某个 GPIO 的功能，可以使用 <span style="background-color: BLACK;">gpio_dev_unmap()</span> 函数取消原有的映射，然后使用 gpio_dev_map() 函数进行新的映射。 GPIO外设初始化时会在gpio_hal.c的 gpio_hal_default_map_init（）函数里按照 GPIO_DEFAULT_DEV_CONFIG 表初始化GPIO（需要打开宏CONFIG_GPIO_DEFAULT_SET_SUPPORT，平台只会操作一次，后面以用户配置为准,如果没有开启该宏，则平台不会操作GPIO，GPIO默认值为高组态）)</li>
 <li>新建工程之后，每个CPU必须配置自己需要控制的GPIO,确保每个CPU管理自己的GPIO，注册相应的中断回调函数，确保程序按预期运行：
   启用宏CONFIG_USR_GPIO_CFG_EN配置；
   创建 usr_gpio_cfg.h 文件：在项目的合适位置创建 usr_gpio_cfg.h 头文件，并在该文件中定义你自定义的 GPIO_DEFAULT_DEV_CONFIG</li>
 <li>gpio_map.h文件中的map表，覆盖了所有GPIO的配置说明，如若和默认有不同的GPIO需在此处进行修改（比如下文会提到的PWM引脚）</li>
 </ul>
+<h3 id="gpio_2">GPIO应用案例<a class="headerlink" href="#gpio_2" title="Permanent link">¶</a></h3>
+<p>我们以第二章成品展示的角度，讲述各个案例下对应GPIO的修改与应用：</p>
+<h4 id="lcd">驱动LCD，烧录程序后，屏幕背光有亮度即代表成功驱动屏幕，这里无关乎显示内容。<a class="headerlink" href="#lcd" title="Permanent link">¶</a></h4>
+<ul>
+<li>由屏幕驱动文件st7365.c中从配置lcd_st7365_config()中找到修改SPI接口对应GPIO：<font color="#E60033">bk_idk/middleware/driver/lcd/lcd_driver.c</font>文件，参照上文中表格，对应修改即可。</li>
+<li>LCD亮灭最直观的是PWM，要确保PWM通道是否和背光一致，需要在lcd_driver.c下修改宏</li>
+<li>LCD_BACKLIGHT_PWM           PWM_ID_1</li>
+<li>LCD_BACKLIGHT_GPIO          GPIO_7</li>
+<li>还需确认PWM引脚为GPIO7与默认的GPIO8不一样，需要在gpio_map.h中修改：{GPIO_7,  GPIO_DEV_PWM1}，除此之外，gpio_map.h文件配置了所有功能引脚的配置及对应关系。</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
+</div>
+<p>若更改其它硬件设备，而导致接口变化，也需要在goio_map.h中找到对应功能下，修改GPIO设备编号。</p>
+<h4 id="tpdemoui">驱动TP触摸，烧录demo后，保证触摸有效并且和UI界面点位一致，没有偏移和触摸失效的情况<a class="headerlink" href="#tpdemoui" title="Permanent link">¶</a></h4>
+<ul>
+<li>触摸的硬件接口是I2C，需对应确认四个引脚：<font color="#E60033">bk_idk/middleware/driver/i2c/sim_i2c_driver_v2.c</font>，修改SDA和SCL信号的引脚</li>
+<li>HWD_GPIO_I2C_SDA        GPIO_39</li>
+<li>HWD_GPIO_I2C_SCL        GPIO_38</li>
+<li>TP_INT和TP_RST分别是TP的中断和复位引脚，<font color="#E60033">bk_idk/middleware/driver/tp/tp_driver.c</font>，修改</li>
+<li>TP_INT_GPIO_ID (GPIO_28)</li>
+<li>TP_RST_GPIO_ID (GPIO_29)</li>
+</ul>
 <h2 id="uart">UART<a class="headerlink" href="#uart" title="Permanent link">¶</a></h2>
-<p>UART分为DEBUG和通信，两者波特率皆115200。UART0作为DEBUG接口，有烧录工程和调试程序的作用。在程序对应位置加入打印信息，烧录后即可看到相关内容。根据原理图可知，UART0引脚对应：RX-GPIO10,TX-GPIO11,在驱动层已配置好用户无需修改；UART1引脚对应：RX-GPIO1,TX-GPIO0,同理已配置好。需要实现的现象是：电脑发给开发板什么数据，开发板将接收到的数据原样返回给电脑。采用sscom串口调试工具(若只查看串口数据可以用哦xshell)。无论采用什么方式实现，都需要配置好串口需要的参数，如下:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">uart_config_t</span><span class="w"> </span><span class="n">s_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="o">.</span><span class="n">baud_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_BAUD_RATE</span><span class="p">,</span><span class="w">   </span><span class="err">波特率配置</span><span class="mi">115200</span>
-<span class="w">    </span><span class="o">.</span><span class="n">data_bits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_DATA_BITS</span><span class="p">,</span><span class="w">   </span><span class="mi">8</span><span class="err">位数据位</span>
-<span class="w">    </span><span class="o">.</span><span class="n">parity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_PARITY</span><span class="p">,</span><span class="w">         </span><span class="err">无奇偶校验</span>
-<span class="w">    </span><span class="o">.</span><span class="n">stop_bits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_STOP_BITS</span><span class="p">,</span><span class="w">   </span><span class="mi">1</span><span class="err">位停止位</span>
-<span class="w">    </span><span class="o">.</span><span class="n">flow_ctrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_FLOW_CTRL</span><span class="p">,</span><span class="w">   </span><span class="err">无硬件控制流</span>
-<span class="w">    </span><span class="o">.</span><span class="n">src_clk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_UART_EXAMPLE_SRC_CLK</span><span class="p">,</span><span class="w">       </span><span class="err">时钟</span><span class="mi">26</span><span class="n">Mhz</span>
-<span class="p">};</span>
+<p>UART有三个，分为DEBUG和通信，两者波特率皆115200。UART0作为DEBUG接口，有烧录工程和调试程序的作用。在程序对应位置加入打印信息，烧录后即可看到相关内容。根据原理图可知，UART0引脚对应：RX-GPIO10,TX-GPIO11,在驱动层已配置好用户无需修改；UART1引脚对应：RX-GPIO1,TX-GPIO0,同理已配置好。需要实现的现象是：电脑发给开发板什么数据，开发板将接收到的数据原样返回给电脑。采用sscom串口调试工具(若只查看串口数据可以用哦xshell)。无论采用什么方式实现，都需要配置好串口需要的参数，如下:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">static</span><span class="w"> </span><span class="no">const</span><span class="w"> </span><span class="no">uart_config_t</span><span class="w"> </span><span class="no">s_config</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span>
+<span class="na">.baud_rate</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">CONFIG_UART_EXAMPLE_BAUD_RATE</span><span class="p">,</span><span class="w">   </span><span class="err">波特率配置</span><span class="mi">115200</span>
+<span class="na">.data_bits</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">CONFIG_UART_EXAMPLE_DATA_BITS</span><span class="p">,</span><span class="w">   </span><span class="mi">8</span><span class="err">位数据位</span>
+<span class="na">.parity</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">CONFIG_UART_EXAMPLE_PARITY</span><span class="p">,</span><span class="w">         </span><span class="err">无奇偶校验</span>
+<span class="na">.stop_bits</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">CONFIG_UART_EXAMPLE_STOP_BITS</span><span class="p">,</span><span class="w">   </span><span class="mi">1</span><span class="err">位停止位</span>
+<span class="na">.flow_ctrl</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">CONFIG_UART_EXAMPLE_FLOW_CTRL</span><span class="p">,</span><span class="w">   </span><span class="err">无硬件控制流</span>
+<span class="na">.src_clk</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="no">CONFIG_UART_EXAMPLE_SRC_CLK</span><span class="p">,</span><span class="w">       </span><span class="err">时钟</span><span class="mi">26</span><span class="no">Mhz</span>
+<span class="err">}</span>
 </code></pre></div>
+<h3 id="uart0">UART0<a class="headerlink" href="#uart0" title="Permanent link">¶</a></h3>
+<p>上文有提及到UART0作为烧录程序和调试程序运行信息的串口，同数据串口参数一致，配置115200波特率。对于烧录过程，主要工作的是FLASH，相关软件驱动无需再配置，用户只需关注硬件连接方式即可。而对于打印信息，我们为此封装了不同优先级，打印信、打印错误等。</p>
+<ul>
+<li>bk_idk/tools/build_tools/cmake/<font color="#E60033">build.cmake</font>中可修改默认打印优先级："-DCFG_LOG_LEVEL=3"</li>
+<li>打印类型及优先级：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>BK_LOG</th>
+<th>LEVEL</th>
+<th>MEAN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BK_LOG_NONE</td>
+<td>0</td>
+<td>无日志输出</td>
+</tr>
+<tr>
+<td>BK_LOG_ERROR</td>
+<td>1</td>
+<td>严重错误信息</td>
+</tr>
+<tr>
+<td>BK_LOG_WARN</td>
+<td>2</td>
+<td>警告信息，已采取恢复措施的错误条件</td>
+</tr>
+<tr>
+<td>BK_LOG_INFO</td>
+<td>3</td>
+<td>日志信息，正常事件流程的信息消息</td>
+</tr>
+<tr>
+<td>BK_LOG_DEBUG</td>
+<td>4</td>
+<td>日志调试信息，非正常使用所需的额外信息如指针等</td>
+</tr>
+<tr>
+<td>BK_LOG_VERBOSE</td>
+<td>5</td>
+<td>日志详细信息，非正常使用所需的额外信息</td>
+</tr>
+</tbody>
+</table>
+<p>当build.cmake中设置的优先级为3时，烧录程序后的串口信息中只能收到BK_LOG_INFO、BK_LOG_DEBUG、BK_LOG_VERBOSE的日志信息。</p>
+<ul>
+<li>同一个列表设置中，还可设置调试模式或正式版本：-DCONFIG_DEBUG_FIRMWARE=1；-DCONFIG_RELEASE_VERSION=1 。当调试模式下，用户可以通过CLI命令分组测试外设模块，已封装好相应功能的指令，需要的时候在编译工程中打开对应配置即可。</li>
+<li>烧录jzw7258的例程时，上电的日志信息，来源于cpu硬件初始化和media层的初始化的信息。例如，CPU0和CPU1的地址空间情况，UI的启动过程信息，蓝牙和WIFI的相关信息等。</li>
+</ul>
+<h3 id="uart1">UART1<a class="headerlink" href="#uart1" title="Permanent link">¶</a></h3>
+<p>UART1作为数据通信串口，承载屏幕点击下的数据和控制器相应的数据，使二者相互联系，当数据相互传输时，屏幕点击是否能及时相应到控制器，重点在于串口传输的稳定性，包括数据正确解析、传输无干扰。</p>
 <h4 id="_4">发包通路<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
-<p>bk_uart_write_bytes() 调用此接口进行数据发送</p>
+<p>用户调用<font color="#E60033">bk_uart_write_bytes()</font> 进行数据发送。</p>
 <h4 id="_5">收包通路<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<div class="mermaid">
+
+graph LR
+
+A[硬件FIFO] --&gt; B[软件FIFO]
+B --&gt; C[应用收包]
+</div>
 <ul>
 <li>硬件收包： UART将接收包存放在硬件FIFO中，当包中数据超过上限时即溢出，产生RX中断。</li>
 <li>中断收包： UART在规定时间内没有收到包时，产生RX接收完成中断，软件进入中断接收处理中，硬件读取数据放入RX FIFO</li>
 <li>应用收报： 调用bk_uart_read_bytes() 接口接收数据，此时从RX FIFO中读取数据，到达一定时间立即返回接收到的数据，如若时间为0则代表立即返回数据。</li>
 </ul>
-<h3 id="_6">应用场景<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<h4 id="_6">应用场景<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
 <p>当前UART支持以下应用场景：</p>
 <ul>
 <li>默认UART中断流程：默认使用bk_uart_write_bytes()和bk_uart_read_bytes()处理收发包，满足大部分应用需求。</li>
 <li>基于第一种方式，注册用户回调callback，产生中断后，执行用户的中断回调函数</li>
 <li>第三方代码实现： bk_interrupt_register(xx, isr, arg) 替换默认的 UART 中断处理程序。 此时收发包过程完全由应用实现。</li>
 </ul>
-<p>以第一种为例，代码流程如下：
-* 主函数入口处进行串口驱动初始化 bk_uart_driver_init()，底层规定，在调用任何其它UART接口函数之前，应先调用此API，以初始化所有UART ID通用资源。
-* 串口初始化：调用bk_uart_init(UART_ID_1, &amp;s_config)，参数一规定ID，参数二为UART参数配置。
-* 使能软件FIFO: 调用bk_uart_enable_sw_fifo()函数。
-* 使能接收中断bk_uart_enable_rx_interrupt()。</p>
-<p>回看第二种实现方式，基于第一种加入用户回调函数，故在此之上还需要开启回调函数。调用bk_uart_register_rx_isr()函数，注册接收中断，其中第二个函数为中断回调函数uart_example_rx_isr，用户需自定义此函数加入中断业务需求。如当前需要实现的现象，将接收到的数据返回给PC端</p>
+<h4 id="1">1. 以第一种为例（非阻塞式），代码流程如下<a class="headerlink" href="#1" title="Permanent link">¶</a></h4>
+<ul>
+<li>主函数入口处进行串口驱动初始化 bk_uart_driver_init()，底层规定，在调用任何其它UART接口函数之前，应先调用此API，以初始化所有UART ID通用资源。</li>
+<li>串口初始化：调用bk_uart_init(UART_ID_1, &amp;s_config)，参数一规定ID，参数二为UART参数配置。</li>
+<li>使能软件FIFO: 调用bk_uart_enable_sw_fifo()函数。</li>
+<li>使能接收中断bk_uart_enable_rx_interrupt()。</li>
+</ul>
+<h4 id="2">2. 第二种为例（中断接收），代码流程如下<a class="headerlink" href="#2" title="Permanent link">¶</a></h4>
+<p>制作demo,通过UI联合接收发送串口数据，实现功能：PC发送数据，UI窗口立即显示PC发送的内容；UI通过键盘，输入数据到窗口，点击send按钮发送给PC，通过串口工具打印从UI发来的数据。</p>
+<ul>
+<li>设计UI界面显示（界面显示见“成品设计章节”）：定义UI接收/发送缓冲区 <font color="#308014">lv_buffer_t结构体</font>,初始化样式标、文本、图标，并创建接收框、发送框的父类，再创建各自子类：按钮、标签，为发送框父类创建keyboard，并隐藏。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>  添加按钮回调事件：当检测到点击时，获取键盘文本，通过UART发送出去。
+  添加发送回调事件：当获取到输入事件发生时，设置文本框和键盘关联，更新layout，并获取键盘文本。
+  显示数据信息：在屏幕上创建标签，设置标签的文本内容为串口数据内容，刷新标签以显示更新后的内容。
+</code></pre></div>
+<p>回看第二种实现方式，基于第一种加入用户回调函数，故在此之上还需要开启回调函数。调用<font color="#E60033">bk_uart_register_rx_isr()</font>函数，注册接收中断，其中第二个函数为中断回调函数<font color="#E60033">uart_example_rx_isr</font>，用户需自定义此函数加入中断业务需求。</p>
 <div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nc">int</span><span class="w"> </span><span class="nf">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bk_uart_read_bytes</span><span class="p">(</span><span class="n">UART_ID_1</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="p">,</span><span class="w"> </span><span class="n">UART_EXAMPLE_BUF_LEN</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nf">len</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">UART_EXAMPLE_BUF_LEN</span><span class="p">)</span>
 <span class="w">    </span><span class="err">{</span>
@@ -778,56 +1396,422 @@
 <p>应用工程中引用串口时，需要打开宏CONFIG_UART1，具体配置详见IDK下的UART项目。</p>
 <h2 id="pwm">PWM<a class="headerlink" href="#pwm" title="Permanent link">¶</a></h2>
 <p>JZW7258开发板有PWM0和PWM1两组PWM开发器，PWM控制器下有3个TIM定时器，每个定时器有2个channel。因此，每个 PWM 控制器有6个 channel，共支持12个 channel，对应软件中的 PWM_ID_0 到 PWM_ID_11。PWM时钟源有26M和32M两种，常规选择26M时钟，则 PSC应配置为25。
-PWM本身的功能就是更改占空比值，可以实现调节背光或蜂鸣器此类带有PWM功能的设备，除正式设置占空比参数的流程外，还需要进行外设初始化相关操作，这是所有外设不可避免的主要环节。在进行正式操作之前，先要确认GPIO接口是否与硬件开发板对应正确，与上文GPIO章节对应所说，修改GPIO需在gpio_map.h文件中确认。发现默认PWM0的gpio为p8,而JZW7258开发板的PWM0对应为p7，故此修改即可。
-以调节背光的PWM0作为示例，代码流程如下：</p>
-<h3 id="_7">初始化部分<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+PWM本身的功能就是更改占空比值，可以实现调节背光或蜂鸣器此类带有PWM功能的设备，除正式设置占空比参数的流程外，还需要进行外设初始化相关操作，这是所有外设不可避免的主要环节。在进行正式操作之前，先要确认GPIO接口是否与硬件开发板对应正确，与上文GPIO章节对应所说，修改GPIO需在gpio_map.h文件中确认。将默认PWM0的gpio为p8,更改为JZW7258开发板的PWM0对应p7。</p>
+<h3 id="1_1">1. 初始化部分<a class="headerlink" href="#1_1" title="Permanent link">¶</a></h3>
 <ul>
 <li>入口主函数PWM驱动初始化，调用bk_pwm_driver_init()。同UART，驱动初始化必须在调用其它PWM接口之前调用此API。</li>
 <li>在开始PWM流程前，先要进行ID初始化，这点和UART同理，调用bk_pwm_init()，配置参数调用 pwm_init_config_t init_config 结构体，重新初始化参数，这里配置PWM为100占空比，即上电后为满率，需要更改PWM的逻辑时再调用更改占空比的用户接口(具体见下文步骤)。</li>
-<li>与常规不同的是，初始化后的启动，需要启用中断才能生效，但这里不需要用户回调处理，同UART非阻塞处理的流程。由于初始化里启用了中断，需要关闭中断，故调用BK_LOG_ON_ERRbk_pwm_capture_stop()/bk_pwm_capture_start()函数。</li>
+<li>与常规不同的是，初始化后的启动，需要启用中断才能生效，但这里不需要用户回调处理，同UART非阻塞处理的流程。由于初始化里启用了中断，需要关闭中断，故调用bk_pwm_capture_stop()/bk_pwm_capture_start()函数。</li>
 </ul>
-<h3 id="pwm_1">设置PWM占空比参数<a class="headerlink" href="#pwm_1" title="Permanent link">¶</a></h3>
+<h3 id="2-pwm">2. 设置PWM占空比参数<a class="headerlink" href="#2-pwm" title="Permanent link">¶</a></h3>
 <ul>
 <li>已封装好函数接口，入口参数为用户需要设置的占空比值，调用user_pwm_set_backlight(uint32_t duty)函数即可</li>
 </ul>
+<h3 id="3">3. 应用场景<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
+<p>我们通过屏幕显示的滑动条作为输入，控制PWM变化，滑动条的值为0-100，对应PWM值0-100，可观察到背光亮灭的变化。</p>
+<h4 id="lvgl">LVGL设计滑动条并显示进度条数值<a class="headerlink" href="#lvgl" title="Permanent link">¶</a></h4>
+<ul>
+<li>创建滑动条和标签，定义其大小位置及样式：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    lv_obj_t *slider = lv_slider_create(lv_scr_act());
+    lv_obj_set_width(slider,200);
+    lv_obj_center(slider);
+    lv_obj_add_event_cb(slider,slider_event_cb,LV_EVENT_VALUE_CHANGED,NULL);
+    //创建标签在屏幕上，并设置文本
+    slabel = lv_label_create(lv_scr_act());
+    lv_label_set_text(slabel, "100");
+    lv_obj_align_to(slabel, slider, LV_ALIGN_OUT_TOP_MID, 0, -15);
+</code></pre></div>
+<ul>
+<li>滑动条事件回调函数，用来获取标签值，并同时调用设置PWM值的API，传入参数为获取到的滑动条标签值。用户使用时，在逻辑需要的地方调用此接口即可设置PWM。</li>
+<li>详见工程路径：projects/jzw7258/main/lv_demo_pwm.c 。</li>
+</ul>
 <h2 id="wifi">WIFI<a class="headerlink" href="#wifi" title="Permanent link">¶</a></h2>
-<p>WiFi也可看做一个外设，故与UART和PWM有异曲同工之妙。
-* 支持三个虚拟接口：STA、AP、Monitor
-* 支持仅 station 模式、仅 AP 模式、station + AP 共存模式
-* 支持 IEEE802.11 b/g/n/ax 2.4GHz 协议标准
-* 支持 AMSDU、AMPDU、QoS、HT40 以及其他主要功能
-* 支持802.11N MCS0-7
-* 支持 WPA、WPA2 及 WPA3 等加密方式
-* station 模式下支持低功耗休眠
-* 空中数据传输最高可达 20Mbits/s TCP 吞吐和 35Mbits/s UDP 吞吐</p>
+<p>WiFi也可看做一个外设，与UART和PWM有异曲同工之妙。</p>
+<ul>
+<li>支持三个虚拟接口：STA、AP、Monitor</li>
+<li>支持仅 station 模式、仅 AP 模式、station + AP 共存模式</li>
+<li>支持 IEEE802.11 b/g/n/ax 2.4GHz 协议标准</li>
+<li>支持 AMSDU、AMPDU、QoS、HT40 以及其他主要功能</li>
+<li>支持802.11N MCS0-7</li>
+<li>支持 WPA、WPA2 及 WPA3 等加密方式</li>
+<li>station 模式下支持低功耗休眠</li>
+<li>空中数据传输最高可达 20Mbits/s TCP 吞吐和 35Mbits/s UDP 吞吐</li>
+</ul>
 <h3 id="station">station模式<a class="headerlink" href="#station" title="Permanent link">¶</a></h3>
 <p>包含了初始化、配置、连接&amp;断开连接等各阶段的具体描述</p>
-<h4 id="wifi_1">WiFi初始化:<a class="headerlink" href="#wifi_1" title="Permanent link">¶</a></h4>
+<h4 id="1-wifi">1. WiFi初始化<a class="headerlink" href="#1-wifi" title="Permanent link">¶</a></h4>
 <ul>
 <li>主任务入口调用 bk_event_init() 函数，以创建任务并初始化时间队列，此函数必须放在其它WIFI/BT接口函数之前。</li>
 <li>再调用 bk_netif_init() 函数，创建并初始化 Lwip 核心任务。</li>
 <li>调用 bk_wifi_init() 函数，创建 Wi-Fi 驱动程序任务，并初始化 Wi-Fi 驱动程序，其中包括：底层 MAC 软件、射频参数、wpa_supplicant 。</li>
 <li>主任务通过调用系统 API 创建应用程序任务。</li>
 </ul>
-<h4 id="wifi_2">WIFI配置：<a class="headerlink" href="#wifi_2" title="Permanent link">¶</a></h4>
+<h4 id="2-wifi">2. WIFI配置<a class="headerlink" href="#2-wifi" title="Permanent link">¶</a></h4>
 <ul>
 <li>调用 bk_wifi_sta_set_config() 函数配置参数，常规情况，用户传入AP名称和密码，必须再bk_wifi_sta_start() 开启之前调用。</li>
 </ul>
-<h4 id="_8">启动阶段：<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<h4 id="3_1">3. 启动阶段<a class="headerlink" href="#3_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>调用 bk_wifi_sta_start() 函数启动WIFI,启用成功返回OK，可先调用bk_wifi_sta_stop()停止，再开启。</li>
 </ul>
-<h4 id="_9">连接阶段：<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<h4 id="4">4. 连接阶段<a class="headerlink" href="#4" title="Permanent link">¶</a></h4>
 <ul>
 <li>调用bk_wifi_sta_connect() 函数连接WIFI，将启动内部扫描和连接流程</li>
 <li>成功发现AP后会上报成功标志</li>
 <li>连接成功后启动 DHCP 客户端服务，触发 DHCP 流程。</li>
 </ul>
-<h4 id="ip">获取IP地址<a class="headerlink" href="#ip" title="Permanent link">¶</a></h4>
+<h4 id="5-ip">5. 获取IP地址<a class="headerlink" href="#5-ip" title="Permanent link">¶</a></h4>
 <ul>
 <li>启动 Lwip 的 DHCP 客户端获取 IP 地址</li>
 <li>触发IPV4，可以进行数据收发，如TCP/UDP。</li>
 </ul>
+<h3 id="ap">AP模式<a class="headerlink" href="#ap" title="Permanent link">¶</a></h3>
+<p>各阶段与station模式流程类似，共6个步骤：初始化阶段、配置阶段、启动阶段、连接阶段、断开阶段、清理阶段</p>
+<h3 id="wi-fi">WI-FI扫描<a class="headerlink" href="#wi-fi" title="Permanent link">¶</a></h3>
+<p>仅 station 或者 station/AP 共存模式支持 Wi-Fi Scan，包含五个 API</p>
+<h4 id="1_2">1. 开启扫描<a class="headerlink" href="#1_2" title="Permanent link">¶</a></h4>
+<p>调用函数bk_wifi_scan_start()开始扫描，扫描完成后，上报 EVENT_WIFI_SCAN_DONE 事件，具体步骤可以参考如下：</p>
+<ul>
+<li>准备扫描完成回调函数，回调函数可以参考 bk_wifi_scan_get_result() 和 bk_wifi_scan_free_result()  </li>
+<li>调用事件注册函数注册扫描完成事件回调，参考 bk_event_register_cb()  </li>
+<li>调用上述开始扫描函数，开启扫描</li>
+</ul>
+<h4 id="2_1">2. 停止扫描<a class="headerlink" href="#2_1" title="Permanent link">¶</a></h4>
+<p>调用函数 bk_wifi_scan_stop() 停止 Wi-Fi 驱动程序扫描，作用与 bk_wifi_sta_disconnect() 类似，但是该函数可能同步释放一些资源</p>
+<h4 id="3_2">3. 获取扫描结果<a class="headerlink" href="#3_2" title="Permanent link">¶</a></h4>
+<p>调用函数 bk_wifi_scan_get_result() 获取扫描热点结果，一般返回值有以下几种：</p>
+<ul>
+<li>
+<p>BK_OK：扫描成功</p>
+</li>
+<li>
+<p>BK_ERR_NULL_PARAM：扫描失败，扫描结果为空</p>
+</li>
+<li>
+<p>BK_ERR_NO_MEM：扫描失败，没有内存</p>
+</li>
+<li>
+<p>others：其他错误</p>
+</li>
+<li>
+<p>函数 bk_wifi_scan_dump_result() 用于打印输出扫描到的热点信息</p>
+</li>
+</ul>
+<h4 id="4_1">4.释放扫描结果<a class="headerlink" href="#4_1" title="Permanent link">¶</a></h4>
+<p>调用 bk_wifi_scan_free_result() 释放申请扫描结果内存</p>
+<h4 id="5">5. 扫描类型<a class="headerlink" href="#5" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>扫描类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主动扫描</td>
+<td>通过发送probe request进行扫描，默认为主动扫描</td>
+</tr>
+<tr>
+<td>被动扫描</td>
+<td>通过被动等待接收beacon而不发送probe request进行扫描</td>
+</tr>
+<tr>
+<td>全信道扫描</td>
+<td>扫描所有信道</td>
+</tr>
+</tbody>
+</table>
+<h3 id="station_1">Station连接场景<a class="headerlink" href="#station_1" title="Permanent link">¶</a></h3>
+<p>在扫描阶段只找到一个目标AP的情况，用户无需关注此过程，仅作参考</p>
+<h4 id="1_3">1. 扫描阶段<a class="headerlink" href="#1_3" title="Permanent link">¶</a></h4>
+<ul>
+<li>Wi-Fi 驱动程序开始在 “Wi-Fi 连接”模式下扫描</li>
+<li>如果未找到目标 AP，将产生 EVENT_WIFI_STA_DISCONNECTED 事件，且原因码为 WIFI_REASON_NO_AP_FOUND</li>
+</ul>
+<h4 id="2_2">2. 认证阶段<a class="headerlink" href="#2_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>发送认证请求数据包并开启认证计时器</li>
+<li>如果在认证计时器超时之前未接收到认证响应数据包，将产生 EVENT_WIFI_STA_DISCONNECTED 事件，原因码为 WIFI_REASON_AUTH_FAIL</li>
+<li>接收到认证响应数据包，认证计时器取消</li>
+<li>AP 在响应中拒绝认证并发送 EVENT_WIFI_STA_DISCONNECTED 事件，原因码为 WIFI_REASON_AUTH_FAIL 或者 AP 指定的其他原因</li>
+</ul>
+<h4 id="3_3">3. 关联阶段<a class="headerlink" href="#3_3" title="Permanent link">¶</a></h4>
+<ul>
+<li>发送关联请求并开启关联计时器</li>
+<li>如果在关联计时器超时之前未收到关联响应，将产生 EVENT_WIFI_STA_DISCONNECTED 事件，原因码为 WIFI_REASON_ASSOC_FAIL</li>
+<li>接收关联响应，并停止关联计时器</li>
+<li>AP 在响应中拒绝关联并发送 EVENT_WIFI_STA_DISCONNECTED 事件，原因代码将在关联响应中指定</li>
+</ul>
+<h4 id="4_2">4. 四次握手阶段<a class="headerlink" href="#4_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>开启握手定时器，定时器超时前未收到 AP 发送的 1/4 EAPOL 帧，将产生 EVENT_WIFI_STA_DISCONNECTED 事件，原因码为 WIFI_REASON_HANDSHAKE_TIMEOUT</li>
+<li>接收到 AP 发送的 1/4 EAPOL 帧</li>
+<li>station 回复 2/4 EAPOL 帧</li>
+<li>如果在握手定时器超时前未收到 AP 发送的 3/4 EAPOL 帧，将产生 EVENT_WIFI_STA_DISCONNECTED 事件，原因码为 WIFI_REASON_HANDSHAKE_TIMEOUT</li>
+<li>接收到 3/4 EAPOL 帧</li>
+<li>station 回复 4/4 EAPOL帧</li>
+<li>station 发送 EVENT_WIFI_STA_CONNECTED 事件</li>
+</ul>
+<h3 id="_7">原因代码<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>SDK 中定义的 Wi-Fi 原因代码，第一列为 wifi_types.h 中定义的名称（默认缺省 WIFI_REASON），第二列为对应数值，该数值可以参考 IEEE 802.11-2020 中的标准数值，第三列为原因描述</p>
+<table>
+<thead>
+<tr>
+<th>原因代码</th>
+<th>数值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNSPECIFIED</td>
+<td>1</td>
+<td>未特定原因</td>
+</tr>
+<tr>
+<td>PREV_AUTH_NOT_VALID</td>
+<td>2</td>
+<td>先前的身份验证不再有效</td>
+</tr>
+<tr>
+<td>DEAUTH_LEAVING</td>
+<td>3发送 STA 离开（或者已经离开）ESS 而被取消身份认证</td>
+<td></td>
+</tr>
+<tr>
+<td>DISASSOC_DUE_TO_INACTIVITY</td>
+<td>4</td>
+<td>由于不活动而解除关联</td>
+</tr>
+<tr>
+<td>DISASSOC_AP_BUSY</td>
+<td>5</td>
+<td>因为 AP 无法处理所有当前关联的 STA</td>
+</tr>
+<tr>
+<td>CLASS2_FRAME_FROM_NONAUTH_STA</td>
+<td>6</td>
+<td>从未经验证的 STA 接收到的2类帧</td>
+</tr>
+<tr>
+<td>CLASS3_FRAME_FROM_NONASSOC_STA</td>
+<td>7</td>
+<td>从非关联 STA 接收的3类帧</td>
+</tr>
+<tr>
+<td>DISASSOC_STA_HAS_LEFT</td>
+<td>8</td>
+<td>由于发送 STA 离开（或者已经离开）BSS 而解除关联</td>
+</tr>
+<tr>
+<td>STA_REQ_ASSOC_WITHOUT_AUTH</td>
+<td>9</td>
+<td>请求（重新）关联的 STA 未通过响应 STA 的身份验证</td>
+</tr>
+<tr>
+<td>PWR_CAPABILITY_NOT_VALID</td>
+<td>10</td>
+<td>由于电源能力元素中的信息不可接受而解除关联</td>
+</tr>
+<tr>
+<td>SUPPORTED_CHANNEL_NOT_VALID</td>
+<td>11</td>
+<td>“支持的信道”元素中的信息不可接受而解除关联</td>
+</tr>
+<tr>
+<td>BSS_TRANSITION_DISASSOC</td>
+<td>12</td>
+<td>由于 BSS 过渡管理而解除关联</td>
+</tr>
+<tr>
+<td>INVALID_IE</td>
+<td>13</td>
+<td>无效信息元素</td>
+</tr>
+<tr>
+<td>MICHAEL_MIC_FAILURE</td>
+<td>14</td>
+<td>信息完整性代码（MIC）故障</td>
+</tr>
+<tr>
+<td>4WAY_HANDSHAKE_TIMEOUT</td>
+<td>15</td>
+<td>四次握手超时</td>
+</tr>
+<tr>
+<td>GROUP_KEY_UPDATE_TIMEOUT</td>
+<td>16</td>
+<td>组密钥更新超时</td>
+</tr>
+<tr>
+<td>IE_IN_4WAY_DIFFERS</td>
+<td>17</td>
+<td>与（重新）关联请求/探测响应/信标帧不同的4次握手 中的信息元素</td>
+</tr>
+<tr>
+<td>GROUP_CIPHER_NOT_VALID</td>
+<td>18</td>
+<td>无效的组密码</td>
+</tr>
+<tr>
+<td>PAIRWISE_CIPHER_NOT_VALID</td>
+<td>19</td>
+<td>无效的成对密码</td>
+</tr>
+<tr>
+<td>AKMP_NOT_VALID</td>
+<td>20</td>
+<td>无效 AKMP</td>
+</tr>
+<tr>
+<td>NSUPPORTED_RSN_IE_VERSION</td>
+<td>21</td>
+<td>不支持的 RSN 信息元素功能</td>
+</tr>
+<tr>
+<td>INVALID_RSN_IE_CAPAB</td>
+<td>22</td>
+<td>无效的 RSN 信息元素功能</td>
+</tr>
+<tr>
+<td>IEEE_802_1X_AUTH_FAILED</td>
+<td>23</td>
+<td>IEEE 802.1x 身份验证失败</td>
+</tr>
+<tr>
+<td>CIPHER_SUITE_REJECTED</td>
+<td>24</td>
+<td>由于安全策略，密码套件被拒绝</td>
+</tr>
+<tr>
+<td>TDLS_TEARDOWN_UNREACHABLE</td>
+<td>25</td>
+<td>TDLS 直连无法到达对端，TDLS 直连断开</td>
+</tr>
+<tr>
+<td>TDLS_TEARDOWN_UNSPECIFIED</td>
+<td>26</td>
+<td>未知原因的 TDLS 直连断开</td>
+</tr>
+<tr>
+<td>SSP_REQUESTED_DISASSOC</td>
+<td>27</td>
+<td>由于会话被 SSP 请求中断而取消关联</td>
+</tr>
+<tr>
+<td>NO_SSP_ROAMING_AGREEMENT</td>
+<td>28</td>
+<td>由于缺少 SSP 漫游协议而取消关联</td>
+</tr>
+<tr>
+<td>BAD_CIPHER_OR_AKM</td>
+<td>29</td>
+<td>因为 SSP 密码套件或者 AKM 的需求，请求服务被拒</td>
+</tr>
+<tr>
+<td>NOT_AUTHORIZED_THIS_LOCATION</td>
+<td>30</td>
+<td>请求的服务在此位置未得到授权</td>
+</tr>
+<tr>
+<td>SERVICE_CHANGE_PRECLUDES_TS</td>
+<td>31</td>
+<td>TS 被删除，原因是 BSS 服务特性或者运行模式改变 导致 Qos AP 缺少足够的带宽供 Qos STA</td>
+</tr>
+<tr>
+<td>UNSPECIFIED_QOS_REASON</td>
+<td>32</td>
+<td>未指定的 Qos 原因</td>
+</tr>
+<tr>
+<td>NOT_ENOUGH_BANDWIDTH</td>
+<td>33</td>
+<td>因为 Qos AP 没有足够的带宽给 Qos STA 而取消关联</td>
+</tr>
+<tr>
+<td>DISASSOC_LOW_ACK</td>
+<td>34</td>
+<td>由于大量的帧需要被确认但是没有确认，因为 AP 未 回复或者糟糕的信道条件导致关联取消</td>
+</tr>
+<tr>
+<td>EXCEEDED_TXOP</td>
+<td>35</td>
+<td>因为 STA 传输超过了 TXOPs 的限制而取消关联</td>
+</tr>
+<tr>
+<td>STA_LEAVING</td>
+<td>36</td>
+<td>请求 STA 正在离开 BSS 或者重启</td>
+</tr>
+<tr>
+<td>END_TS_BA_DLS</td>
+<td>37</td>
+<td>请求 STA 不再使用该流或者会话</td>
+</tr>
+<tr>
+<td>UNKNOWN_TS_BA</td>
+<td>38</td>
+<td>请求 STA 使用一种尚未完成的机制接收帧</td>
+</tr>
+<tr>
+<td>TIMEOUT</td>
+<td>39</td>
+<td>对端 STA 请求超时</td>
+</tr>
+<tr>
+<td>Reserved</td>
+<td>40-45</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>AUTHORIZED_ACCESS_LIMIT_REACHED</td>
+<td>46</td>
+<td>在 Disassociation 帧中：已达到授权访问限制</td>
+</tr>
+<tr>
+<td>EXTERNAL_SERVICE_REQUIREMENTS</td>
+<td>47</td>
+<td>在 Disassociation 帧中：外部服务需求</td>
+</tr>
+<tr>
+<td>INVALID_PMKID</td>
+<td>49</td>
+<td>无效的成对主密钥标识符（PMKID）</td>
+</tr>
+<tr>
+<td>BEACON_LOST</td>
+<td>256</td>
+<td>连续丢失 N 个 信标</td>
+</tr>
+<tr>
+<td>NO_AP_FOUND</td>
+<td>257</td>
+<td>未扫描到目标 AP</td>
+</tr>
+<tr>
+<td>WRONG_PASSWORD</td>
+<td>258</td>
+<td>密码错误 一般密码输错，或者四次握手过程中丢包</td>
+</tr>
+<tr>
+<td>DISCONNECT_BY_APP</td>
+<td>259</td>
+<td>应用层主动断开</td>
+</tr>
+<tr>
+<td>DHCP_TIMEOUT</td>
+<td>260</td>
+<td>DHCP 超时（20s）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_8">蓝牙<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<h3 id="ble">BLE 低功耗蓝牙<a class="headerlink" href="#ble" title="Permanent link">¶</a></h3>
+<h3 id="bt">BT 经典蓝牙<a class="headerlink" href="#bt" title="Permanent link">¶</a></h3>
+<h3 id="dut">DUT<a class="headerlink" href="#dut" title="Permanent link">¶</a></h3>
+<p>---------------------------------------------------end----------------------------------------------------------</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -857,8 +1841,12 @@ PWM本身的功能就是更改占空比值，可以实现调节背光或蜂鸣�
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
 <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
-</body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: "dark"
+});</script></body>
 </html>

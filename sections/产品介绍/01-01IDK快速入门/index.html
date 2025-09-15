@@ -19,9 +19,10 @@
 <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="green" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -59,9 +60,7 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="deep-green" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
@@ -145,6 +144,17 @@
 
         </a>
 </li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+        
+  
+  
+    
+  
+  其它平台芯片介绍
+
+      </a>
+</li>
 </ul>
 </div>
 </nav>
@@ -206,9 +216,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sdk">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      工欲善其事必先利其器，首先准备SDK及其编译工具和烧录工具：
+      工欲善其事必先利其器
     </span>
 </a>
 </li>
@@ -220,7 +230,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       交叉编译工具链部署
     </span>
@@ -228,9 +238,9 @@
 <nav aria-label="交叉编译工具链部署" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      本地部署:
+      本地部署
     </span>
 </a>
 </li>
@@ -238,28 +248,28 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       编译工程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       新建工程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       代码烧录
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sdk_1">
+<a class="md-nav__link" href="#sdk">
 <span class="md-ellipsis">
       SDK说明
     </span>
@@ -326,14 +336,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
-<span class="md-ellipsis">
-    产品
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -371,6 +373,14 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -386,9 +396,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sdk">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      工欲善其事必先利其器，首先准备SDK及其编译工具和烧录工具：
+      工欲善其事必先利其器
     </span>
 </a>
 </li>
@@ -400,7 +410,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       交叉编译工具链部署
     </span>
@@ -408,9 +418,9 @@
 <nav aria-label="交叉编译工具链部署" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      本地部署:
+      本地部署
     </span>
 </a>
 </li>
@@ -418,28 +428,28 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       编译工程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       新建工程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       代码烧录
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sdk_1">
+<a class="md-nav__link" href="#sdk">
 <span class="md-ellipsis">
       SDK说明
     </span>
@@ -452,28 +462,31 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1"><font color="#0B1746"><strong>简介</strong></font><a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h1 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>JZW7258开发板选用BK7258作为MCU，提供与硬件无关的开发框架，使用时非常方便，且处理逻辑完善功能稳定，为用户减少底层驱动的开发时间，更多关注业务逻辑及数据的多样性。BK7258以低功耗蓝牙和WIFI的无线通信著称，使用相关功能时，调用逻辑清晰明了，从SDK结构看，相关占比非常丰富。
-其内核来说，芯片架构采用ARM Cortex-M33内核，时钟总频率为480MHZ（分配给CPU0最大到240MHZ），FPU单元处理，FLASH存储8MB，外部存储16MB，内部时钟晶振提供26MHZ，从代码中可以看到，很多外设的电源管理，默认为26MH。支持2.5-4.3v电源。相关外设包含：GPIOs共56个，SPI * 2，QSPI * 2，UART * 3(UART0作为烧录口复用调试口)，SC  *1, IIC * 2，12x 32-bit PWM channel，详情见&lt;相关资料部分&gt;</p>
-<h3 id="sdk">工欲善其事必先利其器，首先准备SDK及其编译工具和烧录工具：<a class="headerlink" href="#sdk" title="Permanent link">¶</a></h3>
+其内核来说，芯片架构采用ARM Cortex-M33内核，时钟总频率为480MHZ（分配给CPU0最大到240MHZ），FPU单元处理，FLASH存储8MB，外部存储16MB，内部时钟晶振提供26MHZ，从代码中可以看到，很多外设的电源管理，默认为26MH。支持2.5-4.3v电源。相关外设包含：GPIOs共56个，SPI X 2，QSPI X 2，UART X 3(UART0作为烧录口复用调试口)，SC X 1, IIC X 2，12 X 32-bit PWM channel.</p>
+<h3 id="_2">工欲善其事必先利其器<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>准备工作</p>
 <ul>
 <li>代码下载：将压缩包复制到linux系统下，并解压至自定义文件中</li>
 <li>JZW7258开发板</li>
 <li>串口烧录工具</li>
 </ul>
-<h2 id="jzw7258-sdk"><strong>JZW7258 SDK代码下载</strong><a class="headerlink" href="#jzw7258-sdk" title="Permanent link">¶</a></h2>
+<h2 id="jzw7258-sdk">JZW7258 SDK代码下载<a class="headerlink" href="#jzw7258-sdk" title="Permanent link">¶</a></h2>
 <p>准备一个Ubuntu系统，将SDK压缩包放入其系统中，使用其下命令解压至JZW7258：</p>
 <div class="codehilite"><pre><span></span><code>$sudo tar xvf jzw7258_tar.gz -C jzw7258
 </code></pre></div>
-<h2 id="_2"><strong>交叉编译工具链部署</strong><a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_3">交叉编译工具链部署<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>仅Linux系统下的编译，要求Ubuntu 20.04版本。</p>
-<h3 id="_3">本地部署:<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<h3 id="_4">本地部署<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
 <p><strong>脚本安装</strong> ：SDK中存在安装脚本，进入其中安装脚本即可完成构建环境安装</p>
 <div class="codehilite"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="n">bk_idk</span>
 <span class="n">sudo</span><span class="w"> </span><span class="n">bash</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span><span class="n">env_tools</span><span class="o">/</span><span class="n">setup</span><span class="o">/</span><span class="n">armino_env_setup</span><span class="o">.</span><span class="n">sh</span>
 </code></pre></div>
-<p><strong>若脚本安装失败可手动安装</strong>:
-* 解压工具包至/opt/目录下：</p>
+<p><strong>若脚本安装失败可手动安装</strong>:</p>
+<ul>
+<li>解压工具包至/opt/目录下：</li>
+</ul>
 <div class="codehilite"><pre><span></span><code>$sudo tar -xvjf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 -C /opt/
 </code></pre></div>
 <p>工具链默认路径在 middleware/soc/bk7258/bk7258.defconfig 文件中定义，可在其中更改工具链路径：</p>
@@ -491,7 +504,7 @@ $sudo apt install make cmake python3 python3-pip ninja-build -y
 <p>使用下述命令将默认Python2改为Python3,因为Python最低要求版本为Python3.8</p>
 <div class="codehilite"><pre><span></span><code>$sudo ln -s /usr/bin/python3 /usr/bin/python
 </code></pre></div>
-<h2 id="_4">编译工程<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_5">编译工程<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <p>终端下输入命令编译默认工程</p>
 <div class="codehilite"><pre><span></span><code>$make bk7258  
 </code></pre></div>
@@ -502,14 +515,14 @@ $sudo apt install make cmake python3 python3-pip ninja-build -y
 <div class="codehilite"><pre><span></span><code>$make clean
 </code></pre></div>
 <p>编译文件位于，build文件夹中，进入相应项目名称，找到all_app.bin文件，在windows下准备烧录。</p>
-<h2 id="_5"><strong>新建工程</strong><a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<h2 id="_6"><strong>新建工程</strong><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
 <p>在IDK框架中新建工程，目的为模块化测试，以验证单一外围电路模块功能是否正常，不牵涉多线程工作方式。
 新建工程位于 project文件夹下，包含main文件夹、CmakeLists.tx，具体可参考project文件下的工程。</p>
-<h2 id="_6"><strong>代码烧录</strong><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h2 id="_7"><strong>代码烧录</strong><a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
 <p>JZW7258通过DEBUG接口进行烧录，RX和TX信号确认接正确后，先确认开发板通电，再确认串口USB板接入PC端
 烧录工具获取链接：https://dl.bekencorp.com/tools/flash/
 烧录工具BKFIL开盒即用，选择串口后，选择15000000速率，选择Bin文件路径。按住开发板复位键，再点击BKFIL中烧录按钮，松开复位键即可，等待done，即可成功。</p>
-<h2 id="sdk_1"><strong>SDK说明</strong><a class="headerlink" href="#sdk_1" title="Permanent link">¶</a></h2>
+<h2 id="sdk"><strong>SDK说明</strong><a class="headerlink" href="#sdk" title="Permanent link">¶</a></h2>
 <p>解压JZW7258的SDK，从目录结构看，包含一个bk_idk文件，其中内容与根目录下的其它文件一致（除特有的middlerware文件），这是SDK基于两个框架——bk_idk和bk_avdk设计，bk_idk是包含于bk_avdk的，所以目录结构如下</p>
 <div class="codehilite"><pre><span></span><code><span class="n">jzw7258_v33</span>
 <span class="w">  </span><span class="o">|</span>
@@ -555,8 +568,9 @@ $sudo apt install make cmake python3 python3-pip ninja-build -y
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
 <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
 </body>
 </html>

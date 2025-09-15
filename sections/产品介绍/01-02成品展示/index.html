@@ -19,9 +19,10 @@
 <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="green" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -59,9 +60,7 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="deep-green" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
@@ -144,6 +143,17 @@
   相关资料
 
         </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+        
+  
+  
+    
+  
+  其它平台芯片介绍
+
+      </a>
 </li>
 </ul>
 </div>
@@ -309,14 +319,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
-<span class="md-ellipsis">
-    产品
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -353,6 +355,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -418,7 +428,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1"><font color="#0B1746"><strong>简介</strong></font><a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h1 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>JZW7258由开发板和LCD屏幕两部分组成，案例有屏幕内容显示逻辑，和外设驱动运行逻辑。两者的实现皆有FreeRTOS，为其实现线程安全，线程已于底层实现，用户无需考虑单个设备的线程安全，只需注意用户入口线程的安全。</p>
 <p>LCD屏幕UI界面基于LVGL实现，LVGL是一个轻量级的UI库，其API接口非常丰富，为嵌入式设备量身打造。在SDK中，已做好LVGL移植工作，并融合了BK7258的内部逻辑，这决定了用户在引用层进行LVGL相关配置时已不是原来LVGL接口，需要关注BK7258的定制配置，在&lt;系统设计&gt;单元将进行详细讲解。</p>
 <p>JZW7258融合了串口通信、PWM、DMA、ADC、BT、WIFI的实现，将其基础功能完成后，通过LCD显示。 </p>
@@ -458,7 +468,7 @@
 <li>PWM调节LCD背光演示：通过LVGL的滑动条组件，从0-100的键值，对应0-100的占空比，占空比越大亮度越大，如下图是56％占空比下的成品，及其示波器捕获的信号</li>
 </ul>
 <p><img alt="alt text" src="../image-1.png"/>
-<img alt="alt text" src="../image.png"/> </p>
+<img alt="alt text" src="../image.png"/></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -488,8 +498,9 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
 <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
 </body>
 </html>

@@ -19,9 +19,10 @@
 <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="green" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -59,9 +60,7 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="deep-green" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
@@ -144,6 +143,17 @@
   相关资料
 
         </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+        
+  
+  
+    
+  
+  其它平台芯片介绍
+
+      </a>
 </li>
 </ul>
 </div>
@@ -287,14 +297,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
-<span class="md-ellipsis">
-    产品
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -331,6 +333,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -378,6 +388,14 @@
 <p>JZW7258核心便是基于LCD屏幕显示用户需要的UI界面，首先就要确定的是硬件层面的屏幕与开发板的驱动能力，二者是否相匹配，以及对屏幕性能来讲如何可以通过开发板提升。本篇以3.5寸RGB屏幕作为示例进行详细说明，如何驱动屏幕并显示界面。
 对于LCD来讲，可分为RGB型、MCU型、SPI型，SDK中间件层有针对各种类型的适配说明，常规选择RGB型。</p>
 <h2 id="_2">屏幕驱动文件说明<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>驱动文件路径位于SDK根目录 components/bk_peripheral/src/lcd/rgb/文件中，不同型号屏幕独立于一个.c文件。</p>
+<ul>
+<li>屏幕参数配置，包含LCD时钟，工作极性（上升沿/下降沿）以及屏幕hsync和vsync的参数，参考屏幕规格书。</li>
+<li>SPI接口设置，包含SPI时序，重点在复位引脚高电平的事件。SPI的参数配置，SPI_WriteComm写入功能码，每个功能码对应一个功能；SPI_WriteData写入数据，对于前者的一个功能写入数据代表该功能的特性。</li>
+<li>初始化屏幕：对spi引脚进行初始化，并调用刚才描述的spi接口设置的函数。</li>
+<li>初始化结构体参数：对lcd_device_t结构体写入参数，并对此结构体定义变量为当前屏幕型号st7365，对其写入id、名称、分辨率、输入输出RGB格式等。</li>
+</ul>
+<p>在open_lcd时，更改LCD名称和分辨率，这里的名称要和上述的结构体中的参数一致。例如，在jzw7258的例程中，在初始化lcd_open_t结构体中，device_name成员值便是"st7365"。</p>
 <h2 id="rgb">RGB屏幕驱动<a class="headerlink" href="#rgb" title="Permanent link">¶</a></h2>
 <ul>
 <li>id: st7365，可在中间件层找到对应型号的文件-lcd_st7365.c，3.5A部分</li>
@@ -395,9 +413,10 @@
 <div class="codehilite"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">lcd_open_t</span><span class="w"> </span><span class="n">lcd_open</span><span class="w"> </span><span class="o">=</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="o">.</span><span class="n">device_ppi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PPI_320X480</span><span class="p">,</span>
-<span class="w">    </span><span class="o">.</span><span class="n">device_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"st7365"</span><span class="p">,</span>
+<span class="w">    </span><span class="o">.</span><span class="n">device_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"st7365"</span><span class="p">,</span><span class="w"> </span>
 <span class="p">};</span>
 </code></pre></div>
+<p>---------------------------------------------------end----------------------------------------------------------</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -427,8 +446,9 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
 <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
 </body>
 </html>

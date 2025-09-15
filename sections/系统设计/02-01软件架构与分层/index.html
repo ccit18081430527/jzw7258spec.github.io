@@ -19,9 +19,10 @@
 <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/extra.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="green" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -59,9 +60,7 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="green" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="deep-green" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
@@ -144,6 +143,17 @@
   相关资料
 
         </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+        
+  
+  
+    
+  
+  其它平台芯片介绍
+
+      </a>
 </li>
 </ul>
 </div>
@@ -237,24 +247,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      概述：
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      构建与配置：
+      构建与配置
     </span>
 </a>
-<nav aria-label="构建与配置：" class="md-nav">
+<nav aria-label="构建与配置" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      概念：
+      概念
     </span>
 </a>
 </li>
@@ -264,10 +267,10 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      新建工程：
+      新建工程
     </span>
 </a>
-<nav aria-label="新建工程：" class="md-nav">
+<nav aria-label="新建工程" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
@@ -308,6 +311,20 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#freertosrt-thread">
+<span class="md-ellipsis">
+      FreeRTOS与RT-Thread
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#freertos_1">
+<span class="md-ellipsis">
+      FreeRTOS多核调度机制
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -340,14 +357,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
-<span class="md-ellipsis">
-    产品
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -386,6 +395,14 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -401,24 +418,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      概述：
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      构建与配置：
+      构建与配置
     </span>
 </a>
-<nav aria-label="构建与配置：" class="md-nav">
+<nav aria-label="构建与配置" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      概念：
+      概念
     </span>
 </a>
 </li>
@@ -428,10 +438,10 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      新建工程：
+      新建工程
     </span>
 </a>
-<nav aria-label="新建工程：" class="md-nav">
+<nav aria-label="新建工程" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
@@ -472,6 +482,20 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#freertosrt-thread">
+<span class="md-ellipsis">
+      FreeRTOS与RT-Thread
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#freertos_1">
+<span class="md-ellipsis">
+      FreeRTOS多核调度机制
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -482,33 +506,32 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>软件架构与分层</h1>
-<h2 id="_1">概述：<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>前情提及到JZW7258架构分IDK和AVDK，前者作为硬件驱动接口，支持更改引脚配置及相关驱动工作等；后者作为LCD显示，支持在LCD上draw用户想要的样式等。AVDK向上兼容IDK，两者使用时不必过度区分，用户只需注意调度关系即可。</p>
 <p>JZW7258软件层分为中间件层(Middleware)，组件层(Components)，应用层(projets目录下)。其中，中间件层和组件层共同组成API接口函数，用户逻辑开发皆在应用层完成，调用API即可，无需过多关注底层实现逻辑。</p>
 <p>组件层作为连接中间层和应用层的重要环节，基于FreeRtos系统为用户提供软件设计平台，已为每一个模块封装好线程安全。</p>
 <p>中间层抽象了硬件及上层应用，方便用户在不同方案中切换，譬如SOC选择(工程默认BK7258)、各个外设选择。</p>
 <p>应用层作为用户直接使用的部分，包含了如何编译程序、工程配置等功能，从projects目录下的CMakeList文件作为构建方案入口。</p>
-<h2 id="_2">构建与配置：<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<h3 id="_3">概念：<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<h2 id="_2">构建与配置<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h3 id="_3">概念<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <ul>
 <li>projects下的每个文件都是一个可编译工程，包含了配置文件config、主文件main。</li>
 <li>配置文件为构建目录下生成的sdkconfig.h文件，在成功编译某个工程后生成的build中，根据用户工程下的配置文件而生成。</li>
 <li>用户开发中，需要引用组件层的API或某个文件时，需要在CMakeList文件中包含对应文件名及其相对路径。</li>
 </ul>
-<h2 id="_4">新建工程：<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_4">新建工程<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>具体可参考SDK中projects目录下的文件，已为用户设计案例为<font color="#308014">jzw7258</font>文件，将以此例程为例说明。其中包含了LCD显示内容，以及开发板外设工作。为用户模块化设计及测试程序运行，提供模块化开发。对于开发板外设工作，可在bk_idk架构中开发，由于外设驱动都在这一层，无需向上引用，模块化时非常方便，也可向下在AVDK里直接引用。同样，对于LCD显示的模块化测试，需要在根目录下的工程中完成，且只能在这层调用，不可向上的IDK引用。简而言之，用户的应用逻辑实现在AVDK目录下的工程，AVDK可调取IDK的接口，反之不可实现。此外，组件层可配置、新添LCD和TP参数，应用层工程里选择对应name及分辨率即可。</p>
 <p>当新建工程时，通过例程的根目录下CMakeList文件作为编译入口，需要确认编译工具链的路径，编译时的工程名，以及需要引用的组件层的文件。
 而后关注main主文件下的CMakeList文件，这个文件区别于前者，在于这里真正需要引用的内部文件需要参与编译运行的。</p>
 <ul>
-<li>首先确认的是注册函数，将组件层需要的文件名包含进来，src和inc默认包含例程里所有存在的.c和.h文件，PRIV_REQUIRES包含的是组件层和中间层的文件名，比如这里的bk_init，通过全局搜索，找到此文件位于/bk_idk/components/,bk_init中包含对应.c和.h文件，以及当前文件的CMakeList。不难发现，SDK中每层文件都含有属于本文件的CMakeList文件，含有向上包含的功能也有向下被引用的封装，将每一层分离开来，这样的模块化设计便于用户开发。
- <code>plantuml
+<li>首先确认的是注册函数，将组件层需要的文件名包含进来，src和inc默认包含例程里所有存在的.c和.h文件，PRIV_REQUIRES包含的是组件层和中间层的文件名，比如这里的bk_init，通过全局搜索，找到此文件位于/bk_idk/components/,bk_init中包含对应.c和.h文件，以及当前文件的CMakeList。不难发现，SDK中每层文件都含有属于本文件的CMakeList文件，含有向上包含的功能也有向下被引用的封装，将每一层分离开来，这样的模块化设计便于用户开发。</li>
+</ul>
+<p><code>plantuml
 $armino_component_register{
     SRCS "${srcs}"
     INCLUDE_DIRS "${incs}" 
     PRIV_REQUIRES bk_init bk_cli 
-}</code></li>
-</ul>
+}</code></p>
 <p>需要注意的是，若main文件里新增了.c文件，需要在当前层的CMakeList里添加，如下这些文件的路径在main文件里。</p>
 <div class="codehilite"><pre><span></span><code><span class="n">if</span> <span class="p">(</span><span class="n">CONFIG_LV_USE_DEMO_WIDGETS</span><span class="p">)</span>
 <span class="n">list</span><span class="p">(</span><span class="n">APPEND</span> <span class="n">srcs</span>
@@ -520,8 +543,10 @@ $armino_component_register{
 <span class="p">)</span>
 </code></pre></div>
 <p>当前情况下可以正常编译</p>
-<p>接下来正式进入程序设计过程，首先需确认驱动是否成功，比如对于LCD是否正常点亮，触摸是否正常点击。
-* 在主文件main.c里修改对应LCD型号及分辨率，当前使用屏幕st7365，已新建于/jzw7258_v33/components/bk_peripheral/src/lcd/rgb/lcd_st7365.c，在如下位置对应修改，需要注意区分大小写。</p>
+<p>接下来正式进入程序设计过程，首先需确认驱动是否成功，比如对于LCD是否正常点亮，触摸是否正常点击。</p>
+<ul>
+<li>在主文件main.c里修改对应LCD型号及分辨率，当前使用屏幕st7365，已新建于/jzw7258_v33/components/bk_peripheral/src/lcd/rgb/lcd_st7365.c，在如下位置对应修改，需要注意区分大小写。</li>
+</ul>
 <div class="codehilite"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">lcd_open_t</span><span class="w"> </span><span class="n">lcd_open</span><span class="w"> </span><span class="o">=</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="o">.</span><span class="n">device_ppi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PPI_320X480</span><span class="p">,</span>
@@ -563,7 +588,7 @@ lcd_driver.c文件中，lcd_driver_get_spi_gpio（）内部可设置SPI四线的
 <ul>
 <li>TP型号为gt911，components/bk_peripheral/src/tp/tp_gt911.c，关于tp已做好相应点击处理，用户只需要关注引脚与分辨率即可。</li>
 </ul>
-<p>确认TP引脚与原理图对应:从原理图看，TP依靠I2C接口驱动。I2C路径 </p>
+<p>确认TP引脚与原理图对应:从原理图看，TP依靠I2C接口驱动。I2C路径</p>
 <div class="important-box">
     bk_idk/middleware/driver/i2c/sim_i2c_driver_v2.c
 </div>
@@ -606,15 +631,15 @@ lcd_driver.c文件中，lcd_driver_get_spi_gpio（）内部可设置SPI四线的
 在LVGL事件中断函数里，详细描述了LVGL的渲染过程，首先确认渲染内存大小为显示内存的十分之一（Xyes * Yyes * color(bit) * 8BYTE / 1024 /10），采用双BUF缓存方式。配置好参数初始化LV硬件接口层，启动LV。至此算LVGL渲染的初始化部分，现在可以正式向里面draw用户所需要的UI了：打开锁，填充内容，关闭锁，启动，向CPU0传递数据。开锁关锁是为保护LV渲染，不被线程其它事情干扰。</p>
 <div class="admonition tip">
 <p class="admonition-title">提示</p>
-<p>LVGL需要一个缓冲区在此绘制各个部件，通过这个缓冲区传递给显示驱动程序的"flush_cb"，复制内容到显示器，每次渲染至少一行。
-有三种缓冲配置：一个缓冲区；两个缓冲区（从第一个缓冲区发送到第二个缓冲区时，绘制屏幕的下部分，使其渲染和刷新同时进行）；双缓冲（两个大小相同的缓冲区，并将disp_drv.full_refresh设置为1，即代表一直更新，LVGL始终在flush_cb中渲染整个屏幕，只需改变帧缓冲的地址即可）。</p>
+<p>LVGL需要一个缓冲区在此绘制各个部件，通过这个缓冲区传递给显示驱动程序的"flush_cb"，复制内容到显示器，每次渲染至少一行。</p>
 </div>
+<p>有三种缓冲配置：一个缓冲区；两个缓冲区（从第一个缓冲区发送到第二个缓冲区时，绘制屏幕的下部分，使其渲染和刷新同时进行）；双缓冲（两个大小相同的缓冲区，并将disp_drv.full_refresh设置为1，即代表一直更新，LVGL始终在flush_cb中渲染整个屏幕，只需改变帧缓冲的地址即可）。</p>
 <p>一路跳转，LVGL这层中断服务函数，位于mutilmedia这个组件层中，封装在了FreeRTOS创建的一个名为"media_major_mailbox_thread"线程中，其优先级为4，栈空间为2048Bytes。这就需要用户在开发过程中注意以下两点</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>注意优先级，会被高优先级的任务而打断；
- 注意空间大小，会溢出。</p>
 </div>
+<p>注意优先级，会被高优先级的任务而打断；
+注意空间大小，会溢出。</p>
 <p>再次回到主函数中，除了LVGL中断服务函数，还有一个ipc中断服务函数，运行在CPU1中，同样做了对LV的渲染工作，并被media_ipc_chan_cfg_t结构体中的回调函数所调用了，在media_ipc_channel_open里被调用，代表打开LCD。</p>
 <p>media_ipc_lvgl_callback是实现多核协同渲染的核心通信机制，主要作用跨核通信，对此实现的方式是硬件加速的IPC通道+内存共享+中断协同三级架构实现。</p>
 <h3 id="lvgl">LVGL<a class="headerlink" href="#lvgl" title="Permanent link">¶</a></h3>
@@ -668,47 +693,83 @@ SMP全称Symmetric Multiprocessing，即多处理器系统：多个处理器核�
 </code></pre></div>
 <p>在上述创建LVGL线程前，同样需要初始化LVGL队列，LVGL队列深度为20，即队列里最多20个对象。在初始化队列和创建对象的返回值是同一个局部变量，最终作为media_ui_task_init()函数返回值返回，并包含了异常处理。</p>
 <div class="codehilite"><pre><span></span><code>ret = rtos_init_queue(&amp;media_ui_msg_que,
-                                "media_ui_msg_que",
-                                sizeof(media_msg_t),
-                                20);
+"media_ui_msg_que",
+sizeof(media_msg_t),
+20);
 </code></pre></div>
 <p>LVGL线程初始化和其它LCD、UV多媒体初始化在一层初始化中，又包含于media_major_mailbox_message_handle()中，创建了一个优先级为4的线程，不指向CPU，这就意味着指向了每一个CPU。</p>
 <p>从LVGL中断函数出发，一直向上寻找接口，发现他们的父级是media_service_init()接口，这个接口在主函数中，未规定在某个CPU中，即代表中间层的初始化在每个CPU都有作用。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sequenceDiagram</span>
-<span class="w">  </span><span class="n">participant</span><span class="w"> </span><span class="n">M33</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="n">Cortex</span><span class="o">-</span><span class="n">M33</span>
-<span class="w">  </span><span class="n">participant</span><span class="w"> </span><span class="n">DSP</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="n">DSP</span><span class="w"> </span><span class="n">Core</span>
-<span class="w">  </span><span class="n">participant</span><span class="w"> </span><span class="n">SQLite</span>
-<span class="w">  </span><span class="n">participant</span><span class="w"> </span><span class="n">LVGL</span>
+<div class="mermaid">
+sequenceDiagram
+  participant M33 as Cortex-M33
+  participant DSP as DSP Core
+  participant SQLite
+  participant LVGL
 
-<span class="w">  </span><span class="n">M33</span><span class="o">-&gt;&gt;</span><span class="n">SQLite</span><span class="o">:</span><span class="w"> </span><span class="err">执行查询</span><span class="w"> </span><span class="p">(</span><span class="n">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">sensors</span><span class="p">)</span>
-<span class="w">  </span><span class="n">activate</span><span class="w"> </span><span class="n">SQLite</span>
-<span class="w">  </span><span class="n">SQLite</span><span class="o">-&gt;&gt;</span><span class="n">DSP</span><span class="o">:</span><span class="w"> </span><span class="err">请求数据计算</span>
-<span class="w">  </span><span class="n">DSP</span><span class="o">--&gt;&gt;</span><span class="n">SQLite</span><span class="o">:</span><span class="w"> </span><span class="err">返回处理结果</span>
-<span class="w">  </span><span class="n">SQLite</span><span class="o">--&gt;&gt;</span><span class="n">M33</span><span class="o">:</span><span class="w"> </span><span class="err">返回数据集</span>
-<span class="w">  </span><span class="n">deactivate</span><span class="w"> </span><span class="n">SQLite</span>
+  M33-&gt;&gt;SQLite: 执行查询 (SELECT * FROM sensors)
+  activate SQLite
+  SQLite-&gt;&gt;DSP: 请求数据计算
+  DSP--&gt;&gt;SQLite: 返回处理结果
+  SQLite--&gt;&gt;M33: 返回数据集
+  deactivate SQLite
 
-<span class="w">  </span><span class="n">M33</span><span class="o">-&gt;&gt;</span><span class="n">LVGL</span><span class="o">:</span><span class="w"> </span><span class="err">更新</span><span class="n">UI列表</span>
-<span class="w">  </span><span class="n">LVGL</span><span class="o">-&gt;&gt;</span><span class="n">LVGL</span><span class="o">:</span><span class="w"> </span><span class="err">启动动画渲染</span>
-<span class="w">  </span><span class="n">Note</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">LVGL</span><span class="o">:</span><span class="w"> </span><span class="err">使用</span><span class="n">DMA2D加速</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">TD</span>
+  M33-&gt;&gt;LVGL: 更新UI列表
+  LVGL-&gt;&gt;LVGL: 启动动画渲染
+  Note over LVGL: 使用DMA2D加速
+</div>
+<div class="mermaid">
 
-<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="err">进入</span><span class="n">LVGL中断事件</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="err">配置</span><span class="n">LV硬件驱动层参数并初始化</span><span class="err">，启动</span><span class="n">LV</span><span class="p">]</span>
-<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="err">将消息体通过</span><span class="n">CPU1发送回CPU0</span><span class="p">]</span>
-<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="err">将</span><span class="n">LVGL事件推入media_ui_msg_que队列中</span><span class="err">，在引用时弹出</span><span class="p">]</span>
-<span class="w">    </span><span class="n">D</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="err">为包含</span><span class="n">LVGL事件的队列创建线程名为media_ui_task</span><span class="err">，指向</span><span class="n">CPU1</span><span class="p">]</span>
-<span class="w">    </span><span class="n">E</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="err">推入</span><span class="n">media_ui_msg队列中</span><span class="p">]</span>
-<span class="w">    </span><span class="n">F</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">G</span><span class="p">[</span><span class="err">在初始化</span><span class="n">media_ui时初始化线程</span><span class="p">]</span>
-<span class="w">    </span><span class="n">G</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="err">初始化时，开启</span><span class="n">PM电源和CPU1电源</span><span class="err">，并初始化其它多媒体</span><span class="p">]</span>
-<span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">I</span><span class="p">[</span><span class="n">int_main中调用初始化media_ui_init</span><span class="err">，作用于每个</span><span class="n">CPU</span><span class="p">]</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code>pie 
-"cat": 30
-"dog": 50
-"duck": 20
-</code></pre></div>
-<p>单核单片机可能难以同时满足图形渲染和业务逻辑处理的需求。
-硬件上需要说明总线仲裁、时钟同步等关键点；软件层面则要重点介绍实时操作系统的多核调度机制。</p>
+graph TD
+
+A[进入LVGL中断事件] --&gt; B(配置LV硬件驱动层参数并初始化，启动LV)
+B --&gt; C[将消息体通过CPU1发送回CPU0]
+C --&gt; D[将LVGL事件推入media_ui_msg_que队列中，在引用时弹出]
+D --&gt; E[为包含LVGL事件的队列创建线程名为media_ui_task，指向CPU1]
+E --&gt; F[推入media_ui_msg队列中]
+F --&gt; G[在初始化media_ui时初始化线程]
+G --&gt; H[初始化时，开启PM电源和CPU1电源，并初始化其它多媒体]
+H --&gt; I[int_main中调用初始化media_ui_init，作用于每个CPU]
+</div>
+<h3 id="freertosrt-thread">FreeRTOS与RT-Thread<a class="headerlink" href="#freertosrt-thread" title="Permanent link">¶</a></h3>
+<p>对于嵌入式设备，实时操作系统包括FreeRTOS、RT-Thread、u-cos等，而FreeRTOS较为普遍。jzw7258选择此操作系统，并不单是普尔大众的选择，需要从多个维度分析</p>
+<ul>
+<li>从商业专业授权模式看，FreeRTOS更灵活，支持免费商用。而RT-Thread虽然开源，但商业授权更复杂</li>
+<li>从技术生态看，FreeRTOS在ARM Cortex-M系列的适配更成熟，也是被公认的特点，恰好能在BK7258的芯片ARMv8-M中发挥优势</li>
+<li>其次，RT-Thread需要消耗的FLASH空间远比FreeRTOS多，经过裁剪RT-Thread也有50KB RAM，而FreeRTOS内核最小仅需要6KB RAM，对于BK7258自有的SDK来讲，内存有限（8MB Flash + 16MB PSRAM）的情况下占用内存空间越小越好；</li>
+<li>RT-Thread有着丰富的组件特性，提供GUI的开发，但对于我们的SDK，已经集成了音视频/AI等中间件的应用，用FreeRTOS+定制SDK方式约等于用RT-Thread的便利性，并规避了 GPL授权风险，在UI开发中无需第三方库的存在了。</li>
+</ul>
+<h3 id="freertos_1">FreeRTOS多核调度机制<a class="headerlink" href="#freertos_1" title="Permanent link">¶</a></h3>
+<p>jzw7258单片机需要屏幕显示渲染图形，而单核单片机可能难以同时满足图形渲染和业务逻辑处理的需求，所以我们增加了多核调度机制。
+FreeRTOS支持对称多处理（SMP）和非对称多处理（AMP）两种多核调度策略：</p>
+<ul>
+<li>在SMP架构下，FreeRTOS的一个实例可跨多处理器核心调度任务（一对多），同一个调度器能够同时管理所有核心上的任务；AMP架构中，FreeRTOS一个实例对应一个处理器核心（多对多），系统可以在不同架构的核心上运行各自的任务调度器。</li>
+<li>SMP调度的是<font color="#E60033">相同优先级</font>的任务，任务可以被系统调度到空闲的核心上运行，也可通过修改选项<font color="#308014">RUN_MULTIPLE_PRIORITIES</font>为1，具有不同优先级的任务也可以同时运行在多个核心上。这种调度方式提高了系统的并行处理能力，减少了任务在单个核心上的堵塞问题。</li>
+<li>AMP调度的是<font color="#E60033">独立</font>的任务，不会相互干扰，核心之间通过共享内存来实现通信，常见于双核MCU：<font color="#308014">ARM Cortex-M4</font>和M7。</li>
+<li>AMP系统中，核之间的通信通常通过<font color="#308014">流缓冲区</font>或<font color="#308014">消息缓冲区</font>来实现，这些缓冲区位于共享内存中，两个核心可以通过该缓冲区来交换数据，例如，一个核心可以通过中断信号通知另一个核心读取缓冲区中的数据。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>SMP</th>
+<th>AMP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一对多</td>
+<td>一对一</td>
+</tr>
+<tr>
+<td>并行处理</td>
+<td>独立运行互不干扰</td>
+</tr>
+<tr>
+<td>共享相同内存</td>
+<td>缓冲区交换数据</td>
+</tr>
+</tbody>
+</table>
+<p>---------------------------------------------------end----------------------------------------------------------</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -738,8 +799,12 @@ SMP全称Symmetric Multiprocessing，即多处理器系统：多个处理器核�
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
 <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
-</body>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({
+    theme: "dark"
+});</script></body>
 </html>

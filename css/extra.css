@@ -11,14 +11,20 @@ font-weight: normal;
   --md-code-font: "LXGW WenKai"
 }
 /* custom.css */
-h1, h2, h3 {
+h2 {
+  color: rgb(95, 102, 224);
+}
+h3 {
+  color: rgb(57, 97, 125);
+}
+/* h1, h2, h3 {
   color: #2c3e50;
   font-family: "LXGW WenKai", sans-serif;
   font-weight: normal;
-}
+} */
 .important-box {
-  background-color: #fff8e1; /* 浅黄色背景 */
-  border-left: 4px solid #ffc107; /* 左侧黄色边框 */
+  background-color: #142637; /* 背景 */
+  border-left: 4px solid #204e06; /* 左侧边框 */
   padding: 1em;
   margin: 1em 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 轻微阴影 */
@@ -69,11 +75,21 @@ h1, h2, h3 {
   border-bottom-left-radius: 4px;
   font-family: monospace;
 }
-.mermaid2 svg {
-  background-color: #dbe5f9 !important;
+.mermaid {
+  background-color: #000000 !important;
   border-radius: 8px;
-  margin: 1rem 0;
+  padding: 16px !important;
 }
+
+.mermaid svg { 
+  background-color: transparent !important; 
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem;
+  color: #5a21f6;
+}
+
 /* .md-header {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
    }
