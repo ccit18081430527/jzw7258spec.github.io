@@ -6,21 +6,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="技术文档团队" name="author"/>
-<link href="https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/02-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/" rel="canonical"/>
-<link href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-02%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/" rel="prev"/>
-<link href="../02-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" rel="next"/>
-<link href="../../../img/favicon.ico" rel="icon"/>
+<link href="https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/" rel="canonical"/>
+<link href="../../%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/02-01%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/" rel="prev"/>
+<link href="../03-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" rel="next"/>
+<link href="../../../../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.16" name="generator"/>
 <title>软件架构与分层 - JZW软件规格书</title>
-<link href="../../../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=LXGW+WenKai:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="../../../../css/extra.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -37,8 +37,8 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="JZW软件规格书" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="JZW软件规格书">
-<img alt="logo" src="../../../img/favicon.ico"/>
+<a aria-label="JZW软件规格书" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="JZW软件规格书">
+<img alt="logo" src="../../../../img/favicon.ico"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -116,7 +116,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../../../..">
         
   
   
@@ -127,7 +127,7 @@
       </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+<a class="md-tabs__link" href="../../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
           
   
   
@@ -136,16 +136,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
-          
-  
-  
-  相关资料
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<a class="md-tabs__link" href="../../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
         
   
   
@@ -154,6 +145,15 @@
   其它平台芯片介绍
 
       </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
+          
+  
+  
+  相关资料
+
+        </a>
 </li>
 </ul>
 </div>
@@ -165,14 +165,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="JZW软件规格书" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="JZW软件规格书">
-<img alt="logo" src="../../../img/favicon.ico"/>
+<a aria-label="JZW软件规格书" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="JZW软件规格书">
+<img alt="logo" src="../../../../img/favicon.ico"/>
 </a>
     JZW软件规格书
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     首页
     
@@ -195,7 +195,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+<a class="md-nav__link" href="../../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
 <span class="md-ellipsis">
     快速入门
     
@@ -203,7 +203,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/01-02%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/">
+<a class="md-nav__link" href="../../%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/02-01%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/">
 <span class="md-ellipsis">
     成品展示
     
@@ -332,7 +332,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
+<a class="md-nav__link" href="../03-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
 <span class="md-ellipsis">
     硬件接口开发
     
@@ -340,7 +340,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
+<a class="md-nav__link" href="../03-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
 <span class="md-ellipsis">
     屏幕接口开发
     
@@ -348,7 +348,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+<a class="md-nav__link" href="../03-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
 <span class="md-ellipsis">
     应用开发
     
@@ -361,23 +361,31 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle " id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<input class="md-nav__toggle md-toggle " id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     相关资料
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             相关资料
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
+<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
 <span class="md-ellipsis">
     API
     
@@ -385,7 +393,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-02PDF%E4%B8%8B%E8%BD%BD/">
+<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-02PDF%E4%B8%8B%E8%BD%BD/">
 <span class="md-ellipsis">
     PDF下载
     
@@ -394,14 +402,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
-<span class="md-ellipsis">
-    其它平台芯片介绍
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -507,11 +507,22 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>前情提及到JZW7258架构分IDK和AVDK，前者作为硬件驱动接口，支持更改引脚配置及相关驱动工作等；后者作为LCD显示，支持在LCD上draw用户想要的样式等。AVDK向上兼容IDK，两者使用时不必过度区分，用户只需注意调度关系即可。</p>
+<p>MCU为BK7258，该芯片采用双核设计，包括一个主处理器（Cortex-M33内核）和一个音频处理器(DSP)。具体来讲，主控核运行主应用程序和操作系统，音频核用于处理音频编解码核语音识别等任务。但主要工作仍需要依赖于主控核，因此在编译程序时，DSP核向主控核调用中间层，但主控核不可向下调用DSP核的中间层。
+BK7258采用双核异构架构，主处理器运行速度达480MHZ，支持ARMv8-M指令集，具有DSP扩展和FPU（浮点单元）；支持TrustZone技术，提供硬件隔离的安全区域。数字信号处理器（DSP）解编码音视频，运行频率与主核相同或更高。除此之外，该芯片与常规MCU相同支持丰富的外设。</p>
+<p>前情提及到JZW7258架构分IDK和AVDK，对应主控核和音频核的相关处理文件。前者作为硬件驱动接口，支持更改引脚配置及相关驱动工作等；后者作为LCD显示，支持在LCD上draw用户想要的样式等。AVDK向上兼容IDK，两者使用时不必过度区分，用户只需注意调度关系即可。</p>
 <p>JZW7258软件层分为中间件层(Middleware)，组件层(Components)，应用层(projets目录下)。其中，中间件层和组件层共同组成API接口函数，用户逻辑开发皆在应用层完成，调用API即可，无需过多关注底层实现逻辑。</p>
 <p>组件层作为连接中间层和应用层的重要环节，基于FreeRtos系统为用户提供软件设计平台，已为每一个模块封装好线程安全。</p>
 <p>中间层抽象了硬件及上层应用，方便用户在不同方案中切换，譬如SOC选择(工程默认BK7258)、各个外设选择。</p>
 <p>应用层作为用户直接使用的部分，包含了如何编译程序、工程配置等功能，从projects目录下的CMakeList文件作为构建方案入口。</p>
+<ul>
+<li>a.硬件设计角度来看，多核分为同构多核、异构多核。同构多核意味着所有核心采用相同的架构，而异构多核指核心间采用不同的架构。而BK7258则是采用异构双核（M33 + DSP）。</li>
+<li>b.在软件层面来讲，多核又分为对称处理SMP和非对称处理AMP。SMP指所有核心运行同一套程序，通过CoreID等技术实现不同核心间的操作区分。而AMP运行不同核心执行同一套程序。（只有<font color="#E60033">同构多核能实现SMP</font>，异构<font color="#E60033">多核只能采用AMP模式</font>）</li>
+<li>用户控制业务流程，以gpio和lv为例：</li>
+<li>a.在gpio的例程里，由于是在idk工程下，我们只跑cpu0，无需区分cpu配置，建好工程后，从主循环进入完成相应功能，gpio业务是操作触摸按键。在对外设初始化后，key_item_configure()便是实现功能的业务了，对BUTTON申请空间后，先锁住线程，再进行处理，然后解锁，最后启动。</li>
+<li>b.lvgl跑在AVDK DSP核中，运行在CPU1上，在jzw7258例程中，lvgl_handle函数中执行相应业务逻辑。对一系列lv_vendor参数初始化后，lv_vender_iniy() -&gt; lv_vendor_disp_lock() -&gt; lv_demo... -&gt; lv_vendor_unlock() -&gt; lv_vendor_start() 。其原理与gpio一致，只是封装了线程的互斥量锁和解锁的API。</li>
+<li>c.总结：对相应驱动进行初始化后，将业务逻辑部分用互斥锁锁住，处理完逻辑后，启动相应驱动即可运行。</li>
+<li>关于跨核操作：media为中间层，这个中间指的是M33核和DSP两个核之间的跨核操作。meida_ipc_send()函数是指DSP核回传数据到M33核。</li>
+</ul>
 <h2 id="_2">构建与配置<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <h3 id="_3">概念<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <ul>
@@ -520,18 +531,22 @@
 <li>用户开发中，需要引用组件层的API或某个文件时，需要在CMakeList文件中包含对应文件名及其相对路径。</li>
 </ul>
 <h2 id="_4">新建工程<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<p>具体可参考SDK中projects目录下的文件，已为用户设计案例为<font color="#308014">jzw7258</font>文件，将以此例程为例说明。其中包含了LCD显示内容，以及开发板外设工作。为用户模块化设计及测试程序运行，提供模块化开发。对于开发板外设工作，可在bk_idk架构中开发，由于外设驱动都在这一层，无需向上引用，模块化时非常方便，也可向下在AVDK里直接引用。同样，对于LCD显示的模块化测试，需要在根目录下的工程中完成，且只能在这层调用，不可向上的IDK引用。简而言之，用户的应用逻辑实现在AVDK目录下的工程，AVDK可调取IDK的接口，反之不可实现。此外，组件层可配置、新添LCD和TP参数，应用层工程里选择对应name及分辨率即可。</p>
+<p>具体可参考SDK中projects目录下的文件，已为用户设计案例为<font color="#308014">jzw7258</font>文件，将以此例程为例说明，该过程同样试用在主控核下新建工程的步骤。其中包含了LCD显示内容，以及开发板外设工作。为用户模块化设计及测试程序运行，提供模块化开发。对于开发板外设工作，可在bk_idk架构中开发，由于外设驱动都在这一层，无需向上引用，模块化时非常方便，也可向下在AVDK里直接引用。同样，对于LCD显示的模块化测试，需要在根目录下的工程中完成，且只能在这层调用，不可向上的IDK引用。简而言之，用户的应用逻辑实现在AVDK目录下的工程，AVDK可调取IDK的接口，反之不可实现。此外，组件层可配置、新添LCD和TP参数，应用层工程里选择对应name及分辨率即可。</p>
 <p>当新建工程时，通过例程的根目录下CMakeList文件作为编译入口，需要确认编译工具链的路径，编译时的工程名，以及需要引用的组件层的文件。
 而后关注main主文件下的CMakeList文件，这个文件区别于前者，在于这里真正需要引用的内部文件需要参与编译运行的。</p>
 <ul>
 <li>首先确认的是注册函数，将组件层需要的文件名包含进来，src和inc默认包含例程里所有存在的.c和.h文件，PRIV_REQUIRES包含的是组件层和中间层的文件名，比如这里的bk_init，通过全局搜索，找到此文件位于/bk_idk/components/,bk_init中包含对应.c和.h文件，以及当前文件的CMakeList。不难发现，SDK中每层文件都含有属于本文件的CMakeList文件，含有向上包含的功能也有向下被引用的封装，将每一层分离开来，这样的模块化设计便于用户开发。</li>
 </ul>
-<p><code>plantuml
-$armino_component_register{
-    SRCS "${srcs}"
-    INCLUDE_DIRS "${incs}" 
-    PRIV_REQUIRES bk_init bk_cli 
-}</code></p>
+<div class="codehilite"><pre><span></span><code>armino_component_register{
+<span class="w">    </span>SRCS<span class="w"> </span>"<span class="cp">${</span><span class="n">srcs</span><span class="cp">}</span>"
+<span class="w">    </span>INCLUDE_DIRS<span class="w"> </span>"<span class="cp">${</span><span class="n">incs</span><span class="cp">}</span>"<span class="w"> </span>
+<span class="w">    </span>PRIV_REQUIRES<span class="w"> </span>bk_init<span class="w"> </span>bk_cli<span class="w"> </span>
+}
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
+<p>PRIV_REQUIRES参数为私有组件依赖项，在仅用于配置的组件上会被忽略。其它参数可详见<a href="## sections/相关资料/03-01API说明.md">相关资料</a>部分</p>
+</div>
 <p>需要注意的是，若main文件里新增了.c文件，需要在当前层的CMakeList里添加，如下这些文件的路径在main文件里。</p>
 <div class="codehilite"><pre><span></span><code><span class="n">if</span> <span class="p">(</span><span class="n">CONFIG_LV_USE_DEMO_WIDGETS</span><span class="p">)</span>
 <span class="n">list</span><span class="p">(</span><span class="n">APPEND</span> <span class="n">srcs</span>
@@ -718,17 +733,16 @@ sequenceDiagram
   Note over LVGL: 使用DMA2D加速
 </div>
 <div class="mermaid">
-
 graph TD
 
-A[进入LVGL中断事件] --&gt; B(配置LV硬件驱动层参数并初始化，启动LV)
-B --&gt; C[将消息体通过CPU1发送回CPU0]
-C --&gt; D[将LVGL事件推入media_ui_msg_que队列中，在引用时弹出]
-D --&gt; E[为包含LVGL事件的队列创建线程名为media_ui_task，指向CPU1]
-E --&gt; F[推入media_ui_msg队列中]
-F --&gt; G[在初始化media_ui时初始化线程]
-G --&gt; H[初始化时，开启PM电源和CPU1电源，并初始化其它多媒体]
-H --&gt; I[int_main中调用初始化media_ui_init，作用于每个CPU]
+    A[进入LVGL中断事件] --&gt; B(配置LV硬件驱动层参数并初始化，启动LV)
+    B --&gt; C[将消息体通过CPU1发送回CPU0]
+    C --&gt; D[将LVGL事件推入media_ui_msg_que队列中，在引用时弹出]
+    D --&gt; E[为包含LVGL事件的队列创建线程名为media_ui_task，指向CPU1]
+    E --&gt; F[推入media_ui_msg队列中]
+    F --&gt; G[在初始化media_ui时初始化线程]
+    G --&gt; H[初始化时，开启PM电源和CPU1电源，并初始化其它多媒体]
+    H --&gt; I[int_main中调用初始化media_ui_init，作用于每个CPU]
 </div>
 <h3 id="freertosrt-thread">FreeRTOS与RT-Thread<a class="headerlink" href="#freertosrt-thread" title="Permanent link">¶</a></h3>
 <p>对于嵌入式设备，实时操作系统包括FreeRTOS、RT-Thread、u-cos等，而FreeRTOS较为普遍。jzw7258选择此操作系统，并不单是普尔大众的选择，需要从多个维度分析</p>
@@ -799,9 +813,9 @@ FreeRTOS支持对称多处理（SMP）和非对称多处理（AMP）两种多核
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
-<script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
-<script src="../../../js/extra.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
