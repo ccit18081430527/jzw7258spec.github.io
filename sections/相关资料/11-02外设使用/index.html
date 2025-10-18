@@ -1,0 +1,3041 @@
+
+<!DOCTYPE doctype html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="工欲善其事,必先利其器" name="description"/>
+<meta content="技术文档团队" name="author"/>
+<link href="https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-02%E5%A4%96%E8%AE%BE%E4%BD%BF%E7%94%A8/" rel="canonical"/>
+<link href="../11-01API%E8%AF%B4%E6%98%8E/" rel="prev"/>
+<link href="../11-03PDF%E4%B8%8B%E8%BD%BD/" rel="next"/>
+<link href="../../../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.16" name="generator"/>
+<title>外设使用 - JZW软件规格书</title>
+<link href="../../../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=LXGW+WenKai:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../css/extra.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="JZW软件规格书" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="JZW软件规格书">
+<img alt="logo" src="../../../img/favicon.ico"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            JZW软件规格书
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              外设使用
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="关闭自动模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="关闭自动模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"></path></svg>
+</label>
+<input aria-label="切换至夜间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="切换至夜间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+<input aria-label="切换至日间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="切换至日间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Select language" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/" hreflang="zh">
+              楷体
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../JZW7258/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+          
+  
+  
+    
+  
+  JZW7258
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+        
+  
+  
+    
+  
+  其它平台芯片介绍
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../11-01API%E8%AF%B4%E6%98%8E/">
+          
+  
+  
+    
+  
+  相关资料
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="JZW软件规格书" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="JZW软件规格书">
+<img alt="logo" src="../../../img/favicon.ico"/>
+</a>
+    JZW软件规格书
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    首页
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    JZW7258
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            JZW7258
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+<span class="md-ellipsis">
+    快速入门
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/02-01%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/">
+<span class="md-ellipsis">
+    成品展示
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    开发指南
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            开发指南
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/">
+<span class="md-ellipsis">
+    软件架构与分层
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
+<span class="md-ellipsis">
+    硬件接口开发
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-05OS%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83/">
+<span class="md-ellipsis">
+    OS相关参考
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
+<span class="md-ellipsis">
+    屏幕接口开发
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+<span class="md-ellipsis">
+    应用开发
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/">
+<span class="md-ellipsis">
+    其它平台芯片介绍
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle " id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    相关资料
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            相关资料
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle " id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    JZW7258API
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            JZW7258API
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11-01API%E8%AF%B4%E6%98%8E/">
+<span class="md-ellipsis">
+    新建工程
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    外设使用
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    外设使用
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart">
+<span class="md-ellipsis">
+      UART
+    </span>
+</a>
+<nav aria-label="UART" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_driver_init">
+<span class="md-ellipsis">
+      bk_uart_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_uart_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-init-uart-driverthis-api-init-the-resource-common-to-all-uart-id-init-uart-driver-control-memory">
+<span class="md-ellipsis">
+      Functions: Init UART driver.This API init the resource common to all UART id: init UART driver control memory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-null">
+<span class="md-ellipsis">
+      param: NULL
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noticethis-api-should-be-called-before-any-onther-uart-apis">
+<span class="md-ellipsis">
+      notice:This API should be called before any onther UART APIs.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_inituart_id_t-id-const-uart_config_t-config">
+<span class="md-ellipsis">
+      bk_uart_init(uart_id_t id, const uart_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_uart_init(uart_id_t id, const uart_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-init-uart-idthis-api-init-the-uart-id">
+<span class="md-ellipsis">
+      Functions: Init UART id.This API init the UART id:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-id-uart-id-config-uart-parameter-settings">
+<span class="md-ellipsis">
+      param: id-UART id-config UART parameter settings
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_disable_sw_fifouart_id_t-id">
+<span class="md-ellipsis">
+      bk_uart_disable_sw_fifo(uart_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_uart_disable_sw_fifo(uart_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functiondisable-uart-software-fifo">
+<span class="md-ellipsis">
+      Function:Disable UART software fifo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-uart-id">
+<span class="md-ellipsis">
+      param: Uart id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_enable_sw_fifouart_id_t-id">
+<span class="md-ellipsis">
+      bk_uart_enable_sw_fifo(uart_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_uart_enable_sw_fifo(uart_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functiondisable-uart-software-fifo_1">
+<span class="md-ellipsis">
+      Function:Disable UART software fifo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-uart-id_1">
+<span class="md-ellipsis">
+      param: Uart id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_register_rx_isruart_id_t-id-uart_isr_t-isr-void-param">
+<span class="md-ellipsis">
+      bk_uart_register_rx_isr(uart_id_t id, uart_isr_t isr, void *param)
+    </span>
+</a>
+<nav aria-label="bk_uart_register_rx_isr(uart_id_t id, uart_isr_t isr, void *param)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionregister-the-rx-interrupt-service-routine-for-uart-id">
+<span class="md-ellipsis">
+      Function:Register the RX interrupt service routine for UART id.
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramid-uart-id">
+<span class="md-ellipsis">
+      param:id UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_enable_rx_interruptuart_id_t-id">
+<span class="md-ellipsis">
+      bk_uart_enable_rx_interrupt(uart_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_uart_enable_rx_interrupt(uart_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionenable-rx-interrupt-of-uart-id">
+<span class="md-ellipsis">
+      Function:Enable RX interrupt of UART id
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramuart-id">
+<span class="md-ellipsis">
+      param:UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_write_bytesuart_id_t-id-const-void-data-uint32_t-size">
+<span class="md-ellipsis">
+      bk_uart_write_bytes(uart_id_t id, const void *data, uint32_t size)
+    </span>
+</a>
+<nav aria-label="bk_uart_write_bytes(uart_id_t id, const void *data, uint32_t size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionsend-data-to-the-uart-port-from-a-given-buffer-and-length">
+<span class="md-ellipsis">
+      Function:Send data to the UART port from a given buffer and length
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramuart-id_1">
+<span class="md-ellipsis">
+      param:UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_read_bytesuart_id_t-id-void-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_uart_read_bytes(uart_id_t id, void *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_uart_read_bytes(uart_id_t id, void *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionuart-read-bytes-from-uart-buffer">
+<span class="md-ellipsis">
+      Function:UART read bytes from UART buffer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramuart-id_2">
+<span class="md-ellipsis">
+      param:UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio">
+<span class="md-ellipsis">
+      GPIO
+    </span>
+</a>
+<nav aria-label="GPIO" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_driver_init">
+<span class="md-ellipsis">
+      bk_gpio_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_gpio_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioninit-the-gpio-driverthis-api-init-the-resoure-common-to-all-gpio-channelsinit-gpio-driver-control-memorythis-api-should-be-called-before-any-other-gpio-apis">
+<span class="md-ellipsis">
+      Function:Init the GPIO driver.This API init the resoure common to all GPIO channels:Init GPIO driver control memory.This API should be called before any other GPIO APIs.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_enable_output">
+<span class="md-ellipsis">
+      bk_gpio_enable_output()
+    </span>
+</a>
+<nav aria-label="bk_gpio_enable_output()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionenable-gpio-output-mode">
+<span class="md-ellipsis">
+      Function:enable GPIO output mode.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_pull_upgpio_id_t-gpio_id">
+<span class="md-ellipsis">
+      bk_gpio_pull_up(gpio_id_t gpio_id)
+    </span>
+</a>
+<nav aria-label="bk_gpio_pull_up(gpio_id_t gpio_id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionset-gpio-as-pull-up-mode">
+<span class="md-ellipsis">
+      Function:set GPIO as pull up mode
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_set_output_highgpio_id_t-gpio_id">
+<span class="md-ellipsis">
+      bk_gpio_set_output_high(gpio_id_t gpio_id)
+    </span>
+</a>
+<nav aria-label="bk_gpio_set_output_high(gpio_id_t gpio_id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionset-the-gpio-output-high">
+<span class="md-ellipsis">
+      Function:Set the GPIO output high
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_enable_interruptgpio_id_t-id">
+<span class="md-ellipsis">
+      bk_gpio_enable_interrupt(gpio_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_gpio_enable_interrupt(gpio_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionenable-gpio-intterrupt">
+<span class="md-ellipsis">
+      Function:Enable GPIO intterrupt.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pwm">
+<span class="md-ellipsis">
+      PWM
+    </span>
+</a>
+<nav aria-label="PWM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_driver_init">
+<span class="md-ellipsis">
+      bk_pwm_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_pwm_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioninit-the-pwm-driver-this-api-init-the-resoure-common-to-all-pwm-channels">
+<span class="md-ellipsis">
+      Function:Init the PWM driver. This API init the resoure common to all PWM channels:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_initpwm_chan_t-chan-const-pwm_init_config_t-config">
+<span class="md-ellipsis">
+      bk_pwm_init(pwm_chan_t chan, const pwm_init_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_pwm_init(pwm_chan_t chan, const pwm_init_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function">
+<span class="md-ellipsis">
+      Function:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noticefor-dutycycle-relationship-refer-to-bk_pwm_set_period_duty">
+<span class="md-ellipsis">
+      notice:For duty/cycle relationship, refer to bk_pwm_set_period_duty().
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_startpwm_chan_t-chan">
+<span class="md-ellipsis">
+      bk_pwm_start(pwm_chan_t chan)
+    </span>
+</a>
+<nav aria-label="bk_pwm_start(pwm_chan_t chan)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionstart-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels">
+<span class="md-ellipsis">
+      Function:Start a PWM channel.This API init the resoure common to all PWM channels:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_stoppwm_chan_t-chan">
+<span class="md-ellipsis">
+      bk_pwm_stop(pwm_chan_t chan)
+    </span>
+</a>
+<nav aria-label="bk_pwm_stop(pwm_chan_t chan)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionstop-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels">
+<span class="md-ellipsis">
+      Function:Stop a PWM channel.This API init the resoure common to all PWM channels:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_set_period_dutypwm_chan_t-chan-pwm_period_duty_config_t-config">
+<span class="md-ellipsis">
+      bk_pwm_set_period_duty(pwm_chan_t chan, pwm_period_duty_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_pwm_set_period_duty(pwm_chan_t chan, pwm_period_duty_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function_1">
+<span class="md-ellipsis">
+      Function:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notice">
+<span class="md-ellipsis">
+      notice:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attention">
+<span class="md-ellipsis">
+      attention:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_capture_startpwm_chan_t-chan">
+<span class="md-ellipsis">
+      bk_pwm_capture_start(pwm_chan_t chan)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2c">
+<span class="md-ellipsis">
+      I2C
+    </span>
+</a>
+<nav aria-label="I2C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_driver_init">
+<span class="md-ellipsis">
+      bk_i2c_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_i2c_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2ci2c">
+<span class="md-ellipsis">
+      Function:初始化I2C驱动(I2C控制寄存器).
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noticeapiapi">
+<span class="md-ellipsis">
+      notice:这个API须在所有API使用前调用.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_initi2c_id_t-id-const-i2c_config_t-cfg">
+<span class="md-ellipsis">
+      bk_i2c_init(i2c_id_t id, const i2c_config_t *cfg)
+    </span>
+</a>
+<nav aria-label="bk_i2c_init(i2c_id_t id, const i2c_config_t *cfg)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2c-id">
+<span class="md-ellipsis">
+      Function:初始化I2C id :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param">
+<span class="md-ellipsis">
+      param
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_memory_writei2c_id_t-id-const-i2c_mem_param_t-mem_param">
+<span class="md-ellipsis">
+      bk_i2c_memory_write(i2c_id_t id, const i2c_mem_param_t *mem_param)
+    </span>
+</a>
+<nav aria-label="bk_i2c_memory_write(i2c_id_t id, const i2c_mem_param_t *mem_param)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2c">
+<span class="md-ellipsis">
+      Function:将数据写入特定内存地址(指定缓冲区和长度),它只能在I2C主模式下调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_1">
+<span class="md-ellipsis">
+      param
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_master_writei2c_id_t-id-uint32_t-dev_addr-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_master_write(i2c_id_t id, uint32_t dev_addr, const uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_master_write(i2c_id_t id, uint32_t dev_addr, const uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2ci2c_1">
+<span class="md-ellipsis">
+      Function:从特定的缓冲区和长度向I2C端口写入数据，仅在I2C主模式下调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_2">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_master_readi2c_id_t-id-uint32_t-dev_addr-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_master_read(i2c_id_t id, uint32_t dev_addr, uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_master_read(i2c_id_t id, uint32_t dev_addr, uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-i2ci2c">
+<span class="md-ellipsis">
+      Function: 从I2C缓冲区中读取I2C数据,它只能在主模式下被调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_3">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_slave_readi2c_id_t-id-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_slave_read(i2c_id_t id, uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_slave_read(i2c_id_t id, uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2ci2c_2">
+<span class="md-ellipsis">
+      Function:从I2C缓冲区读取数据，它只能在I2C从模式下被调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_4">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_slave_writei2c_id_t-id-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_slave_write(i2c_id_t id, const uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_slave_write(i2c_id_t id, const uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2c_1">
+<span class="md-ellipsis">
+      Function:从给定的缓冲区和长度向I2C端口写入数据,它只能在从模式下使用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_5">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spi">
+<span class="md-ellipsis">
+      SPI
+    </span>
+</a>
+<nav aria-label="SPI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1spi-pin">
+<span class="md-ellipsis">
+      1.SPI Pin
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2spi-api">
+<span class="md-ellipsis">
+      2.SPI API
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_driver_init">
+<span class="md-ellipsis">
+      bk_spi_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_spi_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionspispi">
+<span class="md-ellipsis">
+      Function:初始化SPI驱动(初始化资源公共部分：初始化SPI驱动控制内存)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attentionapiapi">
+<span class="md-ellipsis">
+      attention:这个API须在调用任何其它API之前被调用.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_initspi_id_t-id-const-spi_config_t-config">
+<span class="md-ellipsis">
+      bk_spi_init(spi_id_t id, const spi_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_spi_init(spi_id_t id, const spi_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionspi-id">
+<span class="md-ellipsis">
+      Function:初始化SPI id
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_6">
+<span class="md-ellipsis">
+      param
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_set_modespi_id_t-id-spi_mode_t-mode">
+<span class="md-ellipsis">
+      bk_spi_set_mode(spi_id_t id, spi_mode_t mode)
+    </span>
+</a>
+<nav aria-label="bk_spi_set_mode(spi_id_t id, spi_mode_t mode)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi">
+<span class="md-ellipsis">
+      Function: 设置SPI模式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_7">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_set_bit_widthspi_id_t-id-spi_bit_width_t-bit_width">
+<span class="md-ellipsis">
+      bk_spi_set_bit_width(spi_id_t id, spi_bit_width_t bit_width)
+    </span>
+</a>
+<nav aria-label="bk_spi_set_bit_width(spi_id_t id, spi_bit_width_t bit_width)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_1">
+<span class="md-ellipsis">
+      Function: 设置SPI位宽
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_8">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_set_wire_modespi_id_t-id-spi_wire_mode_t-wire_mode">
+<span class="md-ellipsis">
+      bk_spi_set_wire_mode(spi_id_t id, spi_wire_mode_t wire_mode)
+    </span>
+</a>
+<nav aria-label="bk_spi_set_wire_mode(spi_id_t id, spi_wire_mode_t wire_mode)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionspi">
+<span class="md-ellipsis">
+      Function:设置SPI写模式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_9">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_register_rx_isrspi_id_t-id-spi_isr_t-isr-void-param">
+<span class="md-ellipsis">
+      bk_spi_register_rx_isr(spi_id_t id, spi_isr_t isr, void *param)
+    </span>
+</a>
+<nav aria-label="bk_spi_register_rx_isr(spi_id_t id, spi_isr_t isr, void *param)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi-id">
+<span class="md-ellipsis">
+      Function: 为SPI ID注册接收中断服务例程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_10">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_write_bytesspi_id_t-id-const-void-data-uint32_t-size">
+<span class="md-ellipsis">
+      bk_spi_write_bytes(spi_id_t id, const void *data, uint32_t size)
+    </span>
+</a>
+<nav aria-label="bk_spi_write_bytes(spi_id_t id, const void *data, uint32_t size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_2">
+<span class="md-ellipsis">
+      Function: 从给定的缓冲区和长度发送数据给SPI端口
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_11">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_read_bytesspi_id_t-id-void-data-uint32_t-size">
+<span class="md-ellipsis">
+      bk_spi_read_bytes(spi_id_t id, void *data, uint32_t size)
+    </span>
+</a>
+<nav aria-label="bk_spi_read_bytes(spi_id_t id, void *data, uint32_t size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_3">
+<span class="md-ellipsis">
+      Function: 从SPI缓冲区读取字节
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_12">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_transmitspi_id_t-id-const-void-tx_data-uint32_t-tx_size-void-rx_data-uint32_t-rx_size">
+<span class="md-ellipsis">
+      bk_spi_transmit(spi_id_t id, const void tx_data, uint32_t tx_size, void rx_data, uint32_t rx_size)
+    </span>
+</a>
+<nav aria-label="bk_spi_transmit(spi_id_t id, const void tx_data, uint32_t tx_size, void rx_data, uint32_t rx_size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_4">
+<span class="md-ellipsis">
+      Function: SPI 写入/读取多个字节
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_13">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11-03PDF%E4%B8%8B%E8%BD%BD/">
+<span class="md-ellipsis">
+    PDF下载
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart">
+<span class="md-ellipsis">
+      UART
+    </span>
+</a>
+<nav aria-label="UART" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_driver_init">
+<span class="md-ellipsis">
+      bk_uart_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_uart_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-init-uart-driverthis-api-init-the-resource-common-to-all-uart-id-init-uart-driver-control-memory">
+<span class="md-ellipsis">
+      Functions: Init UART driver.This API init the resource common to all UART id: init UART driver control memory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-null">
+<span class="md-ellipsis">
+      param: NULL
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noticethis-api-should-be-called-before-any-onther-uart-apis">
+<span class="md-ellipsis">
+      notice:This API should be called before any onther UART APIs.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_inituart_id_t-id-const-uart_config_t-config">
+<span class="md-ellipsis">
+      bk_uart_init(uart_id_t id, const uart_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_uart_init(uart_id_t id, const uart_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-init-uart-idthis-api-init-the-uart-id">
+<span class="md-ellipsis">
+      Functions: Init UART id.This API init the UART id:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-id-uart-id-config-uart-parameter-settings">
+<span class="md-ellipsis">
+      param: id-UART id-config UART parameter settings
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_disable_sw_fifouart_id_t-id">
+<span class="md-ellipsis">
+      bk_uart_disable_sw_fifo(uart_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_uart_disable_sw_fifo(uart_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functiondisable-uart-software-fifo">
+<span class="md-ellipsis">
+      Function:Disable UART software fifo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-uart-id">
+<span class="md-ellipsis">
+      param: Uart id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_enable_sw_fifouart_id_t-id">
+<span class="md-ellipsis">
+      bk_uart_enable_sw_fifo(uart_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_uart_enable_sw_fifo(uart_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functiondisable-uart-software-fifo_1">
+<span class="md-ellipsis">
+      Function:Disable UART software fifo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param-uart-id_1">
+<span class="md-ellipsis">
+      param: Uart id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_register_rx_isruart_id_t-id-uart_isr_t-isr-void-param">
+<span class="md-ellipsis">
+      bk_uart_register_rx_isr(uart_id_t id, uart_isr_t isr, void *param)
+    </span>
+</a>
+<nav aria-label="bk_uart_register_rx_isr(uart_id_t id, uart_isr_t isr, void *param)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionregister-the-rx-interrupt-service-routine-for-uart-id">
+<span class="md-ellipsis">
+      Function:Register the RX interrupt service routine for UART id.
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramid-uart-id">
+<span class="md-ellipsis">
+      param:id UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_enable_rx_interruptuart_id_t-id">
+<span class="md-ellipsis">
+      bk_uart_enable_rx_interrupt(uart_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_uart_enable_rx_interrupt(uart_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionenable-rx-interrupt-of-uart-id">
+<span class="md-ellipsis">
+      Function:Enable RX interrupt of UART id
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramuart-id">
+<span class="md-ellipsis">
+      param:UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_write_bytesuart_id_t-id-const-void-data-uint32_t-size">
+<span class="md-ellipsis">
+      bk_uart_write_bytes(uart_id_t id, const void *data, uint32_t size)
+    </span>
+</a>
+<nav aria-label="bk_uart_write_bytes(uart_id_t id, const void *data, uint32_t size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionsend-data-to-the-uart-port-from-a-given-buffer-and-length">
+<span class="md-ellipsis">
+      Function:Send data to the UART port from a given buffer and length
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramuart-id_1">
+<span class="md-ellipsis">
+      param:UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_uart_read_bytesuart_id_t-id-void-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_uart_read_bytes(uart_id_t id, void *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_uart_read_bytes(uart_id_t id, void *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionuart-read-bytes-from-uart-buffer">
+<span class="md-ellipsis">
+      Function:UART read bytes from UART buffer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paramuart-id_2">
+<span class="md-ellipsis">
+      param:UART id
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio">
+<span class="md-ellipsis">
+      GPIO
+    </span>
+</a>
+<nav aria-label="GPIO" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_driver_init">
+<span class="md-ellipsis">
+      bk_gpio_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_gpio_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioninit-the-gpio-driverthis-api-init-the-resoure-common-to-all-gpio-channelsinit-gpio-driver-control-memorythis-api-should-be-called-before-any-other-gpio-apis">
+<span class="md-ellipsis">
+      Function:Init the GPIO driver.This API init the resoure common to all GPIO channels:Init GPIO driver control memory.This API should be called before any other GPIO APIs.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_enable_output">
+<span class="md-ellipsis">
+      bk_gpio_enable_output()
+    </span>
+</a>
+<nav aria-label="bk_gpio_enable_output()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionenable-gpio-output-mode">
+<span class="md-ellipsis">
+      Function:enable GPIO output mode.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_pull_upgpio_id_t-gpio_id">
+<span class="md-ellipsis">
+      bk_gpio_pull_up(gpio_id_t gpio_id)
+    </span>
+</a>
+<nav aria-label="bk_gpio_pull_up(gpio_id_t gpio_id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionset-gpio-as-pull-up-mode">
+<span class="md-ellipsis">
+      Function:set GPIO as pull up mode
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_set_output_highgpio_id_t-gpio_id">
+<span class="md-ellipsis">
+      bk_gpio_set_output_high(gpio_id_t gpio_id)
+    </span>
+</a>
+<nav aria-label="bk_gpio_set_output_high(gpio_id_t gpio_id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionset-the-gpio-output-high">
+<span class="md-ellipsis">
+      Function:Set the GPIO output high
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_gpio_enable_interruptgpio_id_t-id">
+<span class="md-ellipsis">
+      bk_gpio_enable_interrupt(gpio_id_t id)
+    </span>
+</a>
+<nav aria-label="bk_gpio_enable_interrupt(gpio_id_t id)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionenable-gpio-intterrupt">
+<span class="md-ellipsis">
+      Function:Enable GPIO intterrupt.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pwm">
+<span class="md-ellipsis">
+      PWM
+    </span>
+</a>
+<nav aria-label="PWM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_driver_init">
+<span class="md-ellipsis">
+      bk_pwm_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_pwm_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioninit-the-pwm-driver-this-api-init-the-resoure-common-to-all-pwm-channels">
+<span class="md-ellipsis">
+      Function:Init the PWM driver. This API init the resoure common to all PWM channels:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_initpwm_chan_t-chan-const-pwm_init_config_t-config">
+<span class="md-ellipsis">
+      bk_pwm_init(pwm_chan_t chan, const pwm_init_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_pwm_init(pwm_chan_t chan, const pwm_init_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function">
+<span class="md-ellipsis">
+      Function:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noticefor-dutycycle-relationship-refer-to-bk_pwm_set_period_duty">
+<span class="md-ellipsis">
+      notice:For duty/cycle relationship, refer to bk_pwm_set_period_duty().
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_startpwm_chan_t-chan">
+<span class="md-ellipsis">
+      bk_pwm_start(pwm_chan_t chan)
+    </span>
+</a>
+<nav aria-label="bk_pwm_start(pwm_chan_t chan)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionstart-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels">
+<span class="md-ellipsis">
+      Function:Start a PWM channel.This API init the resoure common to all PWM channels:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_stoppwm_chan_t-chan">
+<span class="md-ellipsis">
+      bk_pwm_stop(pwm_chan_t chan)
+    </span>
+</a>
+<nav aria-label="bk_pwm_stop(pwm_chan_t chan)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionstop-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels">
+<span class="md-ellipsis">
+      Function:Stop a PWM channel.This API init the resoure common to all PWM channels:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_set_period_dutypwm_chan_t-chan-pwm_period_duty_config_t-config">
+<span class="md-ellipsis">
+      bk_pwm_set_period_duty(pwm_chan_t chan, pwm_period_duty_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_pwm_set_period_duty(pwm_chan_t chan, pwm_period_duty_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function_1">
+<span class="md-ellipsis">
+      Function:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notice">
+<span class="md-ellipsis">
+      notice:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attention">
+<span class="md-ellipsis">
+      attention:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_pwm_capture_startpwm_chan_t-chan">
+<span class="md-ellipsis">
+      bk_pwm_capture_start(pwm_chan_t chan)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2c">
+<span class="md-ellipsis">
+      I2C
+    </span>
+</a>
+<nav aria-label="I2C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_driver_init">
+<span class="md-ellipsis">
+      bk_i2c_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_i2c_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2ci2c">
+<span class="md-ellipsis">
+      Function:初始化I2C驱动(I2C控制寄存器).
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noticeapiapi">
+<span class="md-ellipsis">
+      notice:这个API须在所有API使用前调用.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_initi2c_id_t-id-const-i2c_config_t-cfg">
+<span class="md-ellipsis">
+      bk_i2c_init(i2c_id_t id, const i2c_config_t *cfg)
+    </span>
+</a>
+<nav aria-label="bk_i2c_init(i2c_id_t id, const i2c_config_t *cfg)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2c-id">
+<span class="md-ellipsis">
+      Function:初始化I2C id :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param">
+<span class="md-ellipsis">
+      param
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_memory_writei2c_id_t-id-const-i2c_mem_param_t-mem_param">
+<span class="md-ellipsis">
+      bk_i2c_memory_write(i2c_id_t id, const i2c_mem_param_t *mem_param)
+    </span>
+</a>
+<nav aria-label="bk_i2c_memory_write(i2c_id_t id, const i2c_mem_param_t *mem_param)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2c">
+<span class="md-ellipsis">
+      Function:将数据写入特定内存地址(指定缓冲区和长度),它只能在I2C主模式下调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_1">
+<span class="md-ellipsis">
+      param
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_master_writei2c_id_t-id-uint32_t-dev_addr-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_master_write(i2c_id_t id, uint32_t dev_addr, const uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_master_write(i2c_id_t id, uint32_t dev_addr, const uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2ci2c_1">
+<span class="md-ellipsis">
+      Function:从特定的缓冲区和长度向I2C端口写入数据，仅在I2C主模式下调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_2">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_master_readi2c_id_t-id-uint32_t-dev_addr-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_master_read(i2c_id_t id, uint32_t dev_addr, uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_master_read(i2c_id_t id, uint32_t dev_addr, uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-i2ci2c">
+<span class="md-ellipsis">
+      Function: 从I2C缓冲区中读取I2C数据,它只能在主模式下被调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_3">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_slave_readi2c_id_t-id-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_slave_read(i2c_id_t id, uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_slave_read(i2c_id_t id, uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2ci2c_2">
+<span class="md-ellipsis">
+      Function:从I2C缓冲区读取数据，它只能在I2C从模式下被调用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_4">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_i2c_slave_writei2c_id_t-id-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms">
+<span class="md-ellipsis">
+      bk_i2c_slave_write(i2c_id_t id, const uint8_t *data, uint32_t size, uint32_t timeout_ms)
+    </span>
+</a>
+<nav aria-label="bk_i2c_slave_write(i2c_id_t id, const uint8_t *data, uint32_t size, uint32_t timeout_ms)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functioni2c_1">
+<span class="md-ellipsis">
+      Function:从给定的缓冲区和长度向I2C端口写入数据,它只能在从模式下使用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_5">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spi">
+<span class="md-ellipsis">
+      SPI
+    </span>
+</a>
+<nav aria-label="SPI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1spi-pin">
+<span class="md-ellipsis">
+      1.SPI Pin
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2spi-api">
+<span class="md-ellipsis">
+      2.SPI API
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_driver_init">
+<span class="md-ellipsis">
+      bk_spi_driver_init()
+    </span>
+</a>
+<nav aria-label="bk_spi_driver_init()" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionspispi">
+<span class="md-ellipsis">
+      Function:初始化SPI驱动(初始化资源公共部分：初始化SPI驱动控制内存)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attentionapiapi">
+<span class="md-ellipsis">
+      attention:这个API须在调用任何其它API之前被调用.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_initspi_id_t-id-const-spi_config_t-config">
+<span class="md-ellipsis">
+      bk_spi_init(spi_id_t id, const spi_config_t *config)
+    </span>
+</a>
+<nav aria-label="bk_spi_init(spi_id_t id, const spi_config_t *config)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionspi-id">
+<span class="md-ellipsis">
+      Function:初始化SPI id
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_6">
+<span class="md-ellipsis">
+      param
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_set_modespi_id_t-id-spi_mode_t-mode">
+<span class="md-ellipsis">
+      bk_spi_set_mode(spi_id_t id, spi_mode_t mode)
+    </span>
+</a>
+<nav aria-label="bk_spi_set_mode(spi_id_t id, spi_mode_t mode)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi">
+<span class="md-ellipsis">
+      Function: 设置SPI模式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_7">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_set_bit_widthspi_id_t-id-spi_bit_width_t-bit_width">
+<span class="md-ellipsis">
+      bk_spi_set_bit_width(spi_id_t id, spi_bit_width_t bit_width)
+    </span>
+</a>
+<nav aria-label="bk_spi_set_bit_width(spi_id_t id, spi_bit_width_t bit_width)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_1">
+<span class="md-ellipsis">
+      Function: 设置SPI位宽
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_8">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_set_wire_modespi_id_t-id-spi_wire_mode_t-wire_mode">
+<span class="md-ellipsis">
+      bk_spi_set_wire_mode(spi_id_t id, spi_wire_mode_t wire_mode)
+    </span>
+</a>
+<nav aria-label="bk_spi_set_wire_mode(spi_id_t id, spi_wire_mode_t wire_mode)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functionspi">
+<span class="md-ellipsis">
+      Function:设置SPI写模式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_9">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_register_rx_isrspi_id_t-id-spi_isr_t-isr-void-param">
+<span class="md-ellipsis">
+      bk_spi_register_rx_isr(spi_id_t id, spi_isr_t isr, void *param)
+    </span>
+</a>
+<nav aria-label="bk_spi_register_rx_isr(spi_id_t id, spi_isr_t isr, void *param)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi-id">
+<span class="md-ellipsis">
+      Function: 为SPI ID注册接收中断服务例程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_10">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_write_bytesspi_id_t-id-const-void-data-uint32_t-size">
+<span class="md-ellipsis">
+      bk_spi_write_bytes(spi_id_t id, const void *data, uint32_t size)
+    </span>
+</a>
+<nav aria-label="bk_spi_write_bytes(spi_id_t id, const void *data, uint32_t size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_2">
+<span class="md-ellipsis">
+      Function: 从给定的缓冲区和长度发送数据给SPI端口
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_11">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_read_bytesspi_id_t-id-void-data-uint32_t-size">
+<span class="md-ellipsis">
+      bk_spi_read_bytes(spi_id_t id, void *data, uint32_t size)
+    </span>
+</a>
+<nav aria-label="bk_spi_read_bytes(spi_id_t id, void *data, uint32_t size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_3">
+<span class="md-ellipsis">
+      Function: 从SPI缓冲区读取字节
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_12">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bk_spi_transmitspi_id_t-id-const-void-tx_data-uint32_t-tx_size-void-rx_data-uint32_t-rx_size">
+<span class="md-ellipsis">
+      bk_spi_transmit(spi_id_t id, const void tx_data, uint32_t tx_size, void rx_data, uint32_t rx_size)
+    </span>
+</a>
+<nav aria-label="bk_spi_transmit(spi_id_t id, const void tx_data, uint32_t tx_size, void rx_data, uint32_t rx_size)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-spi_4">
+<span class="md-ellipsis">
+      Function: SPI 写入/读取多个字节
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#param_13">
+<span class="md-ellipsis">
+      param:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>本节对前述的几大模块的API接口进行分区描述，包括功能、参数、返回值，以及调用事项</p>
+<h2 id="uart">UART<a class="headerlink" href="#uart" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#section1">bk_uart_driver_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section2">bk_uart_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section3">bk_uart_disable_sw_fifo()</a></td>
+</tr>
+<tr>
+<td><a href="#section4">bk_uart_enable_sw_fifo()</a></td>
+</tr>
+<tr>
+<td><a href="#section5">bk_uart_register_rx_isr()</a></td>
+</tr>
+<tr>
+<td><a href="#section6">bk_uart_enable_rx_interrupt()</a></td>
+</tr>
+<tr>
+<td><a href="#section7">bk_uart_write_bytes()</a></td>
+</tr>
+<tr>
+<td><a href="#section8">bk_uart_read_bytes()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bk_uart_driver_init"><h3 id="section1"><span class="bordered-title">bk_uart_driver_init()</span></h3><a class="headerlink" href="#bk_uart_driver_init" title="Permanent link">¶</a></h3>
+<h4 id="functions-init-uart-driverthis-api-init-the-resource-common-to-all-uart-id-init-uart-driver-control-memory">Functions: Init UART driver.This API init the resource common to all UART id: init UART driver control memory<a class="headerlink" href="#functions-init-uart-driverthis-api-init-the-resource-common-to-all-uart-id-init-uart-driver-control-memory" title="Permanent link">¶</a></h4>
+<h4 id="param-null">param: NULL<a class="headerlink" href="#param-null" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return 
+</div>
+<ul>
+<li>BK_OK:succeed</li>
+<li>ohthers:ohther errors</li>
+</ul>
+<h4 id="noticethis-api-should-be-called-before-any-onther-uart-apis">notice:This API should be called before any onther UART APIs.<a class="headerlink" href="#noticethis-api-should-be-called-before-any-onther-uart-apis" title="Permanent link">¶</a></h4>
+<h3 id="bk_uart_inituart_id_t-id-const-uart_config_t-config"><h3 id="section2"><span class="bordered-title">bk_uart_init(uart_id_t id, const uart_config_t *config)</span></h3><a class="headerlink" href="#bk_uart_inituart_id_t-id-const-uart_config_t-config" title="Permanent link">¶</a></h3>
+<h4 id="functions-init-uart-idthis-api-init-the-uart-id">Functions: Init UART id.This API init the UART id:<a class="headerlink" href="#functions-init-uart-idthis-api-init-the-uart-id" title="Permanent link">¶</a></h4>
+<ul>
+<li>Power up the UART id</li>
+<li>Configure the UART id clock</li>
+<li>Map the UART baud rate,data bits,parity,stop bits, flow ctrl and source clock</li>
+<li>Start the UART id</li>
+</ul>
+<h4 id="param-id-uart-id-config-uart-parameter-settings">param: id-UART id-config UART parameter settings<a class="headerlink" href="#param-id-uart-id-config-uart-parameter-settings" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:succeed</li>
+<li>BK_ERR_UART_NOT_INIT:UART driver not init</li>
+<li>BK_ERR_NULL_PARAM:UART config parameter is NULL</li>
+<li>BK_ERR_UART_INVALID_ID:UART id number is invalid</li>
+<li>BK_ERR_UART_BAUD_RATE_NOT_SUPPORT:UART baud rate not support</li>
+<li>ohthers:ohther errors</li>
+</ul>
+<h3 id="bk_uart_disable_sw_fifouart_id_t-id"><h3 id="section3"><span class="bordered-title">bk_uart_disable_sw_fifo(uart_id_t id)</span></h3><a class="headerlink" href="#bk_uart_disable_sw_fifouart_id_t-id" title="Permanent link">¶</a></h3>
+<h4 id="functiondisable-uart-software-fifo">Function:Disable UART software fifo<a class="headerlink" href="#functiondisable-uart-software-fifo" title="Permanent link">¶</a></h4>
+<h4 id="param-uart-id">param: Uart id<a class="headerlink" href="#param-uart-id" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:succeed</li>
+<li>ohthers:others erros</li>
+</ul>
+<h3 id="bk_uart_enable_sw_fifouart_id_t-id"><h3 id="section4"><span class="bordered-title">bk_uart_enable_sw_fifo(uart_id_t id)</span></h3><a class="headerlink" href="#bk_uart_enable_sw_fifouart_id_t-id" title="Permanent link">¶</a></h3>
+<h4 id="functiondisable-uart-software-fifo_1">Function:Disable UART software fifo<a class="headerlink" href="#functiondisable-uart-software-fifo_1" title="Permanent link">¶</a></h4>
+<h4 id="param-uart-id_1">param: Uart id<a class="headerlink" href="#param-uart-id_1" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:succeed</li>
+<li>ohthers:others erros</li>
+</ul>
+<h3 id="bk_uart_register_rx_isruart_id_t-id-uart_isr_t-isr-void-param"><h3 id="section5"><span class="bordered-title">bk_uart_register_rx_isr(uart_id_t id, uart_isr_t isr, void *param)</span></h3><a class="headerlink" href="#bk_uart_register_rx_isruart_id_t-id-uart_isr_t-isr-void-param" title="Permanent link">¶</a></h3>
+<h4 id="functionregister-the-rx-interrupt-service-routine-for-uart-id">Function:Register the RX interrupt service routine for UART id.<a class="headerlink" href="#functionregister-the-rx-interrupt-service-routine-for-uart-id" title="Permanent link">¶</a></h4>
+<h4 id="paramid-uart-id">param:id UART id<a class="headerlink" href="#paramid-uart-id" title="Permanent link">¶</a></h4>
+<ul>
+<li>UART RX callback</li>
+<li>UART RX callback parameter（一般情况下为NULL）</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:succeed</li>
+<li>ohthers:others erros</li>
+</ul>
+<h3 id="bk_uart_enable_rx_interruptuart_id_t-id"><h3 id="section6"><span class="bordered-title">bk_uart_enable_rx_interrupt(uart_id_t id)</span></h3><a class="headerlink" href="#bk_uart_enable_rx_interruptuart_id_t-id" title="Permanent link">¶</a></h3>
+<h4 id="functionenable-rx-interrupt-of-uart-id">Function:Enable RX interrupt of UART id<a class="headerlink" href="#functionenable-rx-interrupt-of-uart-id" title="Permanent link">¶</a></h4>
+<h4 id="paramuart-id">param:UART id<a class="headerlink" href="#paramuart-id" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_uart_write_bytesuart_id_t-id-const-void-data-uint32_t-size"><h3 id="section7"><span class="bordered-title">bk_uart_write_bytes(uart_id_t id, const void *data, uint32_t size)</span></h3><a class="headerlink" href="#bk_uart_write_bytesuart_id_t-id-const-void-data-uint32_t-size" title="Permanent link">¶</a></h3>
+<h4 id="functionsend-data-to-the-uart-port-from-a-given-buffer-and-length">Function:Send data to the UART port from a given buffer and length<a class="headerlink" href="#functionsend-data-to-the-uart-port-from-a-given-buffer-and-length" title="Permanent link">¶</a></h4>
+<h4 id="paramuart-id_1">param:UART id<a class="headerlink" href="#paramuart-id_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>data buffer address</li>
+<li>data length to send</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_uart_read_bytesuart_id_t-id-void-data-uint32_t-size-uint32_t-timeout_ms"><h3 id="section8"><span class="bordered-title">bk_uart_read_bytes(uart_id_t id, void *data, uint32_t size, uint32_t timeout_ms)</span></h3><a class="headerlink" href="#bk_uart_read_bytesuart_id_t-id-void-data-uint32_t-size-uint32_t-timeout_ms" title="Permanent link">¶</a></h3>
+<h4 id="functionuart-read-bytes-from-uart-buffer">Function:UART read bytes from UART buffer<a class="headerlink" href="#functionuart-read-bytes-from-uart-buffer" title="Permanent link">¶</a></h4>
+<h4 id="paramuart-id_2">param:UART id<a class="headerlink" href="#paramuart-id_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>pointer to the buffer</li>
+<li>data length to read</li>
+<li>timeout ms, if set BEKEN_WAIT_FOREVER, read will wait forever</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_ERR_UART_NOT_INIT: UART driver not init</li>
+<li>BK_ERR_UART_INVALID_ID: UART id number is invalid</li>
+<li>BK_ERR_UART_ID_NOT_INIT: UART id not init</li>
+<li>BK_ERR_UART_RX_TIMEOUT: UART receive data timeout</li>
+<li>others (&gt;=0): The number of bytes read from UART FIFO</li>
+</ul>
+<h2 id="gpio">GPIO<a class="headerlink" href="#gpio" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#section11">bk_gpio_driver_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section12">bk_gpio_enable_output()</a></td>
+</tr>
+<tr>
+<td><a href="#section13">bk_gpio_pull_up()</a></td>
+</tr>
+<tr>
+<td><a href="#section14">bk_gpio_set_output_high()</a></td>
+</tr>
+<tr>
+<td><a href="#section15">bk_gpio_enable_interrupt()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bk_gpio_driver_init"><h3 id="section11"><span class="bordered-title">bk_gpio_driver_init()</span></h3><a class="headerlink" href="#bk_gpio_driver_init" title="Permanent link">¶</a></h3>
+<h4 id="functioninit-the-gpio-driverthis-api-init-the-resoure-common-to-all-gpio-channelsinit-gpio-driver-control-memorythis-api-should-be-called-before-any-other-gpio-apis">Function:Init the GPIO driver.This API init the resoure common to all GPIO channels:Init GPIO driver control memory.This API should be called before any other GPIO APIs.<a class="headerlink" href="#functioninit-the-gpio-driverthis-api-init-the-resoure-common-to-all-gpio-channelsinit-gpio-driver-control-memorythis-api-should-be-called-before-any-other-gpio-apis" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_gpio_enable_output"><h3 id="section12"><span class="bordered-title">bk_gpio_enable_output()</span></h3><a class="headerlink" href="#bk_gpio_enable_output" title="Permanent link">¶</a></h3>
+<h4 id="functionenable-gpio-output-mode">Function:enable GPIO output mode.<a class="headerlink" href="#functionenable-gpio-output-mode" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>BK_ERR_GPIO_CHAN_ID: invalid GPIO channel</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_gpio_pull_upgpio_id_t-gpio_id"><h3 id="section13"><span class="bordered-title">bk_gpio_pull_up(gpio_id_t gpio_id)</span></h3><a class="headerlink" href="#bk_gpio_pull_upgpio_id_t-gpio_id" title="Permanent link">¶</a></h3>
+<h4 id="functionset-gpio-as-pull-up-mode">Function:set GPIO as pull up mode<a class="headerlink" href="#functionset-gpio-as-pull-up-mode" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>BK_ERR_GPIO_CHAN_ID: invalid GPIO channel</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_gpio_set_output_highgpio_id_t-gpio_id"><h3 id="section14"><span class="bordered-title">bk_gpio_set_output_high(gpio_id_t gpio_id)</span></h3><a class="headerlink" href="#bk_gpio_set_output_highgpio_id_t-gpio_id" title="Permanent link">¶</a></h3>
+<h4 id="functionset-the-gpio-output-high">Function:Set the GPIO output high<a class="headerlink" href="#functionset-the-gpio-output-high" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>BK_ERR_GPIO_CHAN_ID: invalid GPIO channel</li>
+<li>BK_ERR_GPIO_NOT_OUTPUT_MODE:GPIO not in output mode</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_gpio_enable_interruptgpio_id_t-id"><h3 id="section15"><span class="bordered-title">bk_gpio_enable_interrupt(gpio_id_t id)</span></h3><a class="headerlink" href="#bk_gpio_enable_interruptgpio_id_t-id" title="Permanent link">¶</a></h3>
+<h4 id="functionenable-gpio-intterrupt">Function:Enable GPIO intterrupt.<a class="headerlink" href="#functionenable-gpio-intterrupt" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>BK_ERR_GPIO_CHAN_ID: invalid GPIO channel</li>
+<li>BK_ERR_GPIO_NOT_INPUT_MODE : GPIO is not input mode</li>
+<li>others: other errors.</li>
+</ul>
+<h2 id="pwm">PWM<a class="headerlink" href="#pwm" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#section21">bk_pwm_driver_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section22">bk_pwm_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section23">bk_pwm_start()</a></td>
+</tr>
+<tr>
+<td><a href="#section24">bk_pwm_stop()</a></td>
+</tr>
+<tr>
+<td><a href="#section25">bk_pwm_set_period_duty()</a></td>
+</tr>
+<tr>
+<td><a href="#section26">bk_pwm_capture_start()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bk_pwm_driver_init"><h3 id="section21"><span class="bordered-title">bk_pwm_driver_init()</span></h3><a class="headerlink" href="#bk_pwm_driver_init" title="Permanent link">¶</a></h3>
+<h4 id="functioninit-the-pwm-driver-this-api-init-the-resoure-common-to-all-pwm-channels">Function:Init the PWM driver. This API init the resoure common to all PWM channels:<a class="headerlink" href="#functioninit-the-pwm-driver-this-api-init-the-resoure-common-to-all-pwm-channels" title="Permanent link">¶</a></h4>
+<ul>
+<li>Init PWM driver control memory.</li>
+<li>Configure PWM common clock to 26M.</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_pwm_initpwm_chan_t-chan-const-pwm_init_config_t-config"><h3 id="section22"><span class="bordered-title">bk_pwm_init(pwm_chan_t chan, const pwm_init_config_t *config)</span></h3><a class="headerlink" href="#bk_pwm_initpwm_chan_t-chan-const-pwm_init_config_t-config" title="Permanent link">¶</a></h3>
+<h5 id="function">Function:<a class="headerlink" href="#function" title="Permanent link">¶</a></h5>
+<p>Init PWM channel.This API init the PWM channel:
+* Power up the PWM channel;Configure the PWM channel clock to 26M;
+* Map the PWM channel to dedicated GPIO port;Set the period and duty cycle.</p>
+<h4 id="noticefor-dutycycle-relationship-refer-to-bk_pwm_set_period_duty">notice:For duty/cycle relationship, refer to bk_pwm_set_period_duty().<a class="headerlink" href="#noticefor-dutycycle-relationship-refer-to-bk_pwm_set_period_duty" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>BK_ERR_PWM_NOT_INIT: PWM driver not init</li>
+<li>BK_ERR_NULL_PARAM: config is NULL</li>
+<li>BK_ERR_PWM_CHAN_ID: invalid PWM channel</li>
+<li>BK_ERR_PWM_PERIOD_DUTY: PWM duty/period relationship is invalid</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_pwm_startpwm_chan_t-chan"><h3 id="section23"><span class="bordered-title">bk_pwm_start(pwm_chan_t chan)</span></h3><a class="headerlink" href="#bk_pwm_startpwm_chan_t-chan" title="Permanent link">¶</a></h3>
+<h4 id="functionstart-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels">Function:Start a PWM channel.This API init the resoure common to all PWM channels:<a class="headerlink" href="#functionstart-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels" title="Permanent link">¶</a></h4>
+<ul>
+<li>Init PWM driver control memory;</li>
+<li>Configure PWM common clock to 26M.</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_pwm_stoppwm_chan_t-chan"><h3 id="section24"><span class="bordered-title">bk_pwm_stop(pwm_chan_t chan)</span></h3><a class="headerlink" href="#bk_pwm_stoppwm_chan_t-chan" title="Permanent link">¶</a></h3>
+<h4 id="functionstop-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels">Function:Stop a PWM channel.This API init the resoure common to all PWM channels:<a class="headerlink" href="#functionstop-a-pwm-channelthis-api-init-the-resoure-common-to-all-pwm-channels" title="Permanent link">¶</a></h4>
+<ul>
+<li>Init PWM driver control memory;</li>
+<li>Configure PWM common clock to 26M.</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>others: other errors.</li>
+</ul>
+<h3 id="bk_pwm_set_period_dutypwm_chan_t-chan-pwm_period_duty_config_t-config"><h3 id="section25"><span class="bordered-title">bk_pwm_set_period_duty(pwm_chan_t chan, pwm_period_duty_config_t *config)</span></h3><a class="headerlink" href="#bk_pwm_set_period_dutypwm_chan_t-chan-pwm_period_duty_config_t-config" title="Permanent link">¶</a></h3>
+<h4 id="function_1">Function:<a class="headerlink" href="#function_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>Config PWM period and duty cycle.</li>
+<li>This API is used to configure the period and duty time. The unit is cycle of PWM channel clock,since the PWM channel clock is default to 26M, the unit is 1/26M (1/26 000 000) seconds.</li>
+<li>The beken chip supports up to 3 duties, the exact duty numbers depends on the target type.</li>
+</ul>
+<h4 id="notice">notice:<a class="headerlink" href="#notice" title="Permanent link">¶</a></h4>
+<ul>
+<li>Example1-the simplest case:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">            </span><span class="n">Clock</span><span class="w"> </span><span class="n">cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">26</span><span class="n">M</span>
+<span class="w">            </span><span class="n">Initial</span><span class="w"> </span><span class="k">signal</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">High</span>
+<span class="w">            </span><span class="n">duty_cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">            </span><span class="n">duty2_cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">            </span><span class="n">duty3_cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">            </span><span class="n">period_cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">                                    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span><span class="w">    </span><span class="n">__</span>
+<span class="w">            </span><span class="n">Clock</span><span class="w"> </span><span class="n">Signal</span><span class="p">:</span><span class="w">   </span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span><span class="o">|</span><span class="w">  </span><span class="o">|</span><span class="n">__</span>
+<span class="w">                                     </span><span class="n">____________</span><span class="w">                  </span><span class="n">____________</span><span class="w">                 </span><span class="n">_______</span>
+<span class="w">            </span><span class="n">PWM</span><span class="w"> </span><span class="n">Signal</span><span class="p">:</span><span class="w">    </span><span class="n">__</span><span class="o">|</span><span class="w">                  </span><span class="o">|</span><span class="n">___________</span><span class="o">|</span><span class="w">                 </span><span class="o">|</span><span class="n">___________</span><span class="o">|</span>
+
+<span class="w">            </span><span class="n">Duty1</span><span class="p">:</span><span class="w">           </span><span class="o">|&lt;-------</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">-----&gt;|</span>
+
+<span class="w">            </span><span class="n">Period</span><span class="p">:</span><span class="w">          </span><span class="o">|&lt;----------</span><span class="w"> </span><span class="n">Period1</span><span class="w"> </span><span class="o">---------&gt;|&lt;------</span><span class="w"> </span><span class="n">Period2</span><span class="w"> </span><span class="o">------------&gt;|</span>
+</code></pre></div>
+<p>Example2 - 3 duty with initial signal high:</p>
+<div class="codehilite"><pre><span></span><code>        Clock cycle = 1/26M
+        duty_cycle = D1 = 1
+        duty2_cycle = D2 = 2
+        duty3_cycle = D3 = 3
+        period_cycle = 1 + 2 + 3 = 6
+</code></pre></div>
+<p><img alt="alt text" src="../image-8.png"/></p>
+<p>Example3 - 3 duty with initial signal low:</p>
+<div class="codehilite"><pre><span></span><code>            Clock cycle = 1/26M
+            duty_cycle = D1 = 1
+            duty2_cycle = D2 = 2
+            duty3_cycle = D3 = 3
+            period_cycle = D1 + D2 + D3 = 6
+</code></pre></div>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<ul>
+<li>Example4 - 3 duty with initial signal low and period &gt; (D1 + D2 + D3):</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>        Clock cycle = 1/26M
+        duty_cycle = D1 = 1
+        duty2_cycle = D2 = 2
+        duty3_cycle = D3 = 3
+        period_cycle = D1 + D2 + D3 + 1 = 7
+</code></pre></div>
+<p><img alt="alt text" src="../image-9.png"/></p>
+<h4 id="attention">attention:<a class="headerlink" href="#attention" title="Permanent link">¶</a></h4>
+<ul>
+<li>The period should great or equal to (D1 + D2 + D3)</li>
+<li>If the duty Dx is 0, then Dx+1 to D3 should also be 0. If D1 is 0, it indicates the duty ratio is 0% and the signal is always low.</li>
+<li>If D1 equals period, it indicates the duty ratio is 100% and the signal is always high.</li>
+<li>The signal strengh between two successive duties is opposite, e.g. if signal of D1 is high, then signal of D2 is low.</li>
+<li>The initial signal is the signal strengh of D1 if D1 is not 0.</li>
+<li>The duty/period configuration is very flexible, different configurations may have same result.</li>
+</ul>
+<div class="subtitle-box">
+return: 
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>BK_ERR_NULL_PARAM: config is NULL</li>
+<li>BK_ERR_PWM_CHAN_NOT_INIT: PWM channel not init</li>
+<li>BK_ERR_PWM_CHAN_ID: invalid PWM channel</li>
+<li>BK_ERR_PWM_PERIOD_DUTY: PWM duty/period relationship is invalid</li>
+<li>others: other errors</li>
+</ul>
+<h3 id="bk_pwm_capture_startpwm_chan_t-chan"><h3 id="section26"><span class="bordered-title">bk_pwm_capture_start(pwm_chan_t chan)</span></h3><a class="headerlink" href="#bk_pwm_capture_startpwm_chan_t-chan" title="Permanent link">¶</a></h3>
+<div class="subtitle-box">
+Function: 
+</div>
+<p>Start the PWM capture</p>
+<div class="subtitle-box">
+param: 
+</div>
+<p>channel to be started</p>
+<div class="subtitle-box">
+return: 
+</div>
+<ul>
+<li>
+<ul>
+<li>BK_OK: succeed</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_PWM_NOT_INIT: PWM driver not init</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_PWM_CHAN_ID: invalid PWM channel</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>others: other errors.</li>
+</ul>
+</li>
+</ul>
+<h2 id="i2c">I2C<a class="headerlink" href="#i2c" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#section31">bk_i2c_driver_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section32">bk_i2c_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section33">bk_i2c_memory_write()</a></td>
+</tr>
+<tr>
+<td><a href="#section34">bk_i2c_master_write()</a></td>
+</tr>
+<tr>
+<td><a href="#section35">bk_i2c_master_read()</a></td>
+</tr>
+<tr>
+<td><a href="#section36">bk_i2c_slave_read()</a></td>
+</tr>
+<tr>
+<td><a href="#section37">bk_i2c_slave_write()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bk_i2c_driver_init"><h3 id="section31"><span class="bordered-title">bk_i2c_driver_init()</span></h3><a class="headerlink" href="#bk_i2c_driver_init" title="Permanent link">¶</a></h3>
+<h4 id="functioni2ci2c">Function:初始化I2C驱动(I2C控制寄存器).<a class="headerlink" href="#functioni2ci2c" title="Permanent link">¶</a></h4>
+<h4 id="noticeapiapi">notice:这个API须在所有API使用前调用.<a class="headerlink" href="#noticeapiapi" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>ohthers: ohther errors.</li>
+</ul>
+<h3 id="bk_i2c_initi2c_id_t-id-const-i2c_config_t-cfg"><h3 id="section32"><span class="bordered-title">bk_i2c_init(i2c_id_t id, const i2c_config_t *cfg)</span></h3><a class="headerlink" href="#bk_i2c_initi2c_id_t-id-const-i2c_config_t-cfg" title="Permanent link">¶</a></h3>
+<h4 id="functioni2c-id">Function:初始化I2C id :<a class="headerlink" href="#functioni2c-id" title="Permanent link">¶</a></h4>
+<ul>
+<li>上电启动I2C ID</li>
+<li>配置I2C ID时钟</li>
+<li>将I2C ID映射到专用GPIO端口</li>
+<li>设置I2C参数</li>
+<li>启动I2C ID</li>
+</ul>
+<h4 id="param">param<a class="headerlink" href="#param" title="Permanent link">¶</a></h4>
+<ul>
+<li>id-I2C id</li>
+<li>config-I2C参数设置
+多功能GPIO初始化会影响其它功能</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_NULL_PARAM:I2C设置参数为空</li>
+<li>BK_ERR_I2C_NOT_INIT:I2C驱动没有初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h3 id="bk_i2c_memory_writei2c_id_t-id-const-i2c_mem_param_t-mem_param"><h3 id="section33"><span class="bordered-title">bk_i2c_memory_write(i2c_id_t id, const i2c_mem_param_t *mem_param)</span></h3><a class="headerlink" href="#bk_i2c_memory_writei2c_id_t-id-const-i2c_mem_param_t-mem_param" title="Permanent link">¶</a></h3>
+<h4 id="functioni2c">Function:将数据写入特定内存地址(指定缓冲区和长度),它只能在I2C主模式下调用<a class="headerlink" href="#functioni2c" title="Permanent link">¶</a></h4>
+<h4 id="param_1">param<a class="headerlink" href="#param_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>id: I2C id</li>
+<li>mem: 内存参数</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_NULL_PARAM:I2C内存参数为空</li>
+<li>BK_ERR_I2C_NOT_INIT:I2C驱动没有初始化</li>
+<li>BK_ERR_I2C_INVALID_ID:I2C id编号无效</li>
+<li>BK_ERR_I2C_ID_NOT_INIT:I2C id未初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h3 id="bk_i2c_master_writei2c_id_t-id-uint32_t-dev_addr-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms"><h3 id="section34"><span class="bordered-title">bk_i2c_master_write(i2c_id_t id, uint32_t dev_addr, const uint8_t *data, uint32_t size, uint32_t timeout_ms)</span></h3><a class="headerlink" href="#bk_i2c_master_writei2c_id_t-id-uint32_t-dev_addr-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms" title="Permanent link">¶</a></h3>
+<h4 id="functioni2ci2c_1">Function:从特定的缓冲区和长度向I2C端口写入数据，仅在I2C主模式下调用<a class="headerlink" href="#functioni2ci2c_1" title="Permanent link">¶</a></h4>
+<h4 id="param_2">param:<a class="headerlink" href="#param_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>id:I2C ID</li>
+<li>dev_addr:从设备地址</li>
+<li>data:指向缓冲区的指针</li>
+<li>size:写入的数据长度</li>
+<li>timeout_ms:超时时间 </li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_I2C_NOT_INIT:I2C驱动未初始化</li>
+<li>BK_ERR_I2C_INVALID_ID:I2C ID编号无效</li>
+<li>BK_ERR_I2C_ID_NOT_INIT:I2C ID没有初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h3 id="bk_i2c_master_readi2c_id_t-id-uint32_t-dev_addr-uint8_t-data-uint32_t-size-uint32_t-timeout_ms"><h3 id="section35"><span class="bordered-title">bk_i2c_master_read(i2c_id_t id, uint32_t dev_addr, uint8_t *data, uint32_t size, uint32_t timeout_ms)</span></h3><a class="headerlink" href="#bk_i2c_master_readi2c_id_t-id-uint32_t-dev_addr-uint8_t-data-uint32_t-size-uint32_t-timeout_ms" title="Permanent link">¶</a></h3>
+<h4 id="function-i2ci2c">Function: 从I2C缓冲区中读取I2C数据,它只能在主模式下被调用<a class="headerlink" href="#function-i2ci2c" title="Permanent link">¶</a></h4>
+<h4 id="param_3">param:<a class="headerlink" href="#param_3" title="Permanent link">¶</a></h4>
+<ul>
+<li>id:I2C ID</li>
+<li>dev_addr:从设备地址</li>
+<li>data:指向缓冲区的指针</li>
+<li>size:写入的数据长度</li>
+<li>timeout_ms:超时时间 </li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_I2C_NOT_INIT:I2C驱动未初始化</li>
+<li>BK_ERR_I2C_INVALID_ID:I2C ID编号无效</li>
+<li>BK_ERR_I2C_ID_NOT_INIT:I2C ID没有初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h3 id="bk_i2c_slave_readi2c_id_t-id-uint8_t-data-uint32_t-size-uint32_t-timeout_ms"><h3 id="section36"><span class="bordered-title">bk_i2c_slave_read(i2c_id_t id, uint8_t *data, uint32_t size, uint32_t timeout_ms)</span></h3><a class="headerlink" href="#bk_i2c_slave_readi2c_id_t-id-uint8_t-data-uint32_t-size-uint32_t-timeout_ms" title="Permanent link">¶</a></h3>
+<h4 id="functioni2ci2c_2">Function:从I2C缓冲区读取数据，它只能在I2C从模式下被调用<a class="headerlink" href="#functioni2ci2c_2" title="Permanent link">¶</a></h4>
+<h4 id="param_4">param:<a class="headerlink" href="#param_4" title="Permanent link">¶</a></h4>
+<ul>
+<li>id:I2C ID</li>
+<li>dev_addr:从设备地址</li>
+<li>data:指向缓冲区的指针</li>
+<li>size:读取的数据长度</li>
+<li>timeout_ms:超时时间 </li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_I2C_NOT_INIT:I2C驱动未初始化</li>
+<li>BK_ERR_I2C_INVALID_ID:I2C ID编号无效</li>
+<li>BK_ERR_I2C_ID_NOT_INIT:I2C ID没有初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h3 id="bk_i2c_slave_writei2c_id_t-id-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms"><h3 id="section37"><span class="bordered-title">bk_i2c_slave_write(i2c_id_t id, const uint8_t *data, uint32_t size, uint32_t timeout_ms)</span></h3><a class="headerlink" href="#bk_i2c_slave_writei2c_id_t-id-const-uint8_t-data-uint32_t-size-uint32_t-timeout_ms" title="Permanent link">¶</a></h3>
+<h4 id="functioni2c_1">Function:从给定的缓冲区和长度向I2C端口写入数据,它只能在从模式下使用<a class="headerlink" href="#functioni2c_1" title="Permanent link">¶</a></h4>
+<h4 id="param_5">param:<a class="headerlink" href="#param_5" title="Permanent link">¶</a></h4>
+<ul>
+<li>id:I2C id</li>
+<li>data:指向缓冲区的指针</li>
+<li>size:缓冲区的长度</li>
+<li>timeout_ms:超时时间</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_I2C_NOT_INIT:I2C驱动未初始化</li>
+<li>BK_ERR_I2C_INVALID_ID:I2C ID编号无效</li>
+<li>BK_ERR_I2C_ID_NOT_INIT:I2C ID没有初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h2 id="spi">SPI<a class="headerlink" href="#spi" title="Permanent link">¶</a></h2>
+<h3 id="1spi-pin">1.SPI Pin<a class="headerlink" href="#1spi-pin" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>pin</th>
+<th>gpio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPI1_GPIO_CLK</td>
+<td>GPIO_2</td>
+</tr>
+<tr>
+<td>SPI1_GPIO_CSX</td>
+<td>GPIO_3</td>
+</tr>
+<tr>
+<td>SPI1_GPIO_SDA</td>
+<td>GPIO_4</td>
+</tr>
+<tr>
+<td>SPI1_GPIO_RST</td>
+<td>GPIO_15</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2spi-api">2.SPI API<a class="headerlink" href="#2spi-api" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#section41">bk_spi_driver_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section42">bk_spi_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section43">bk_spi_init()</a></td>
+</tr>
+<tr>
+<td><a href="#section44">bk_spi_set_bit_width()</a></td>
+</tr>
+<tr>
+<td><a href="#section45">bk_spi_set_wire_mode()</a></td>
+</tr>
+<tr>
+<td><a href="#section46">bk_spi_register_rx_isr()</a></td>
+</tr>
+<tr>
+<td><a href="#section47">bk_spi_write_bytes()</a></td>
+</tr>
+<tr>
+<td><a href="#section48">bk_spi_read_bytes()</a></td>
+</tr>
+<tr>
+<td><a href="#section49">bk_spi_transmit()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bk_spi_driver_init"><h3 id="section41"><span class="bordered-title">bk_spi_driver_init()</span></h3><a class="headerlink" href="#bk_spi_driver_init" title="Permanent link">¶</a></h3>
+<h4 id="functionspispi">Function:初始化SPI驱动(初始化资源公共部分：初始化SPI驱动控制内存)<a class="headerlink" href="#functionspispi" title="Permanent link">¶</a></h4>
+<h4 id="attentionapiapi">attention:这个API须在调用任何其它API之前被调用.<a class="headerlink" href="#attentionapiapi" title="Permanent link">¶</a></h4>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>ohthers: ohther errors.</li>
+</ul>
+<h3 id="bk_spi_initspi_id_t-id-const-spi_config_t-config"><h3 id="section42"><span class="bordered-title">bk_spi_init(spi_id_t id, const spi_config_t *config)</span></h3><a class="headerlink" href="#bk_spi_initspi_id_t-id-const-spi_config_t-config" title="Permanent link">¶</a></h3>
+<h4 id="functionspi-id">Function:初始化SPI id<a class="headerlink" href="#functionspi-id" title="Permanent link">¶</a></h4>
+<ul>
+<li>上电启动SPI ID</li>
+<li>配置SPI ID时钟</li>
+<li>将SPI ID映射到专用GPIO端口</li>
+<li>设置SPI参数</li>
+<li>启动SPI ID</li>
+</ul>
+<h4 id="param_6">param<a class="headerlink" href="#param_6" title="Permanent link">¶</a></h4>
+<ul>
+<li>id-SPI id</li>
+<li>config-SPI参数设置
+多功能GPIO初始化会影响其它功能</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK:成功</li>
+<li>BK_ERR_NULL_PARAM:SPI设置参数为空</li>
+<li>BK_ERR_SPI_NOT_INIT:SPI驱动没有初始化</li>
+<li>ohthers:其它错误</li>
+</ul>
+<h3 id="bk_spi_set_modespi_id_t-id-spi_mode_t-mode"><h3 id="section43"><span class="bordered-title">bk_spi_set_mode(spi_id_t id, spi_mode_t mode)</span></h3><a class="headerlink" href="#bk_spi_set_modespi_id_t-id-spi_mode_t-mode" title="Permanent link">¶</a></h3>
+<h4 id="function-spi">Function: 设置SPI模式<a class="headerlink" href="#function-spi" title="Permanent link">¶</a></h4>
+<h4 id="param_7">param:<a class="headerlink" href="#param_7" title="Permanent link">¶</a></h4>
+<ul>
+<li>id: SPI id</li>
+<li>mode: SPI mode</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>ohthers: ohther errors.</li>
+</ul>
+<h3 id="bk_spi_set_bit_widthspi_id_t-id-spi_bit_width_t-bit_width"><h3 id="section44"><span class="bordered-title">bk_spi_set_bit_width(spi_id_t id, spi_bit_width_t bit_width)</span></h3><a class="headerlink" href="#bk_spi_set_bit_widthspi_id_t-id-spi_bit_width_t-bit_width" title="Permanent link">¶</a></h3>
+<h4 id="function-spi_1">Function: 设置SPI位宽<a class="headerlink" href="#function-spi_1" title="Permanent link">¶</a></h4>
+<h4 id="param_8">param:<a class="headerlink" href="#param_8" title="Permanent link">¶</a></h4>
+<ul>
+<li>id: SPI id</li>
+<li>bit_width: SPI bit width</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>ohthers: ohther errors.</li>
+</ul>
+<h3 id="bk_spi_set_wire_modespi_id_t-id-spi_wire_mode_t-wire_mode"><h3 id="section45"><span class="bordered-title">bk_spi_set_wire_mode(spi_id_t id, spi_wire_mode_t wire_mode)</span></h3><a class="headerlink" href="#bk_spi_set_wire_modespi_id_t-id-spi_wire_mode_t-wire_mode" title="Permanent link">¶</a></h3>
+<h4 id="functionspi">Function:设置SPI写模式<a class="headerlink" href="#functionspi" title="Permanent link">¶</a></h4>
+<h4 id="param_9">param:<a class="headerlink" href="#param_9" title="Permanent link">¶</a></h4>
+<ul>
+<li>id- SPI id</li>
+<li>wirte_mode-SPI write mode</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>ohthers: ohther errors.</li>
+</ul>
+<h3 id="bk_spi_register_rx_isrspi_id_t-id-spi_isr_t-isr-void-param"><h3 id="section46"><span class="bordered-title">bk_spi_register_rx_isr(spi_id_t id, spi_isr_t isr, void *param)</span></h3><a class="headerlink" href="#bk_spi_register_rx_isrspi_id_t-id-spi_isr_t-isr-void-param" title="Permanent link">¶</a></h3>
+<h4 id="function-spi-id">Function: 为SPI ID注册接收中断服务例程<a class="headerlink" href="#function-spi-id" title="Permanent link">¶</a></h4>
+<h4 id="param_10">param:<a class="headerlink" href="#param_10" title="Permanent link">¶</a></h4>
+<ul>
+<li>id - SPI id</li>
+<li>isr - SPI 接收回调</li>
+<li>param - SPI接收回调函数</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>BK_OK: succeed</li>
+<li>ohthers: ohther errors.</li>
+</ul>
+<h3 id="bk_spi_write_bytesspi_id_t-id-const-void-data-uint32_t-size"><h3 id="section47"><span class="bordered-title">bk_spi_write_bytes(spi_id_t id, const void *data, uint32_t size)</span></h3><a class="headerlink" href="#bk_spi_write_bytesspi_id_t-id-const-void-data-uint32_t-size" title="Permanent link">¶</a></h3>
+<h4 id="function-spi_2">Function: 从给定的缓冲区和长度发送数据给SPI端口<a class="headerlink" href="#function-spi_2" title="Permanent link">¶</a></h4>
+<h4 id="param_11">param:<a class="headerlink" href="#param_11" title="Permanent link">¶</a></h4>
+<ul>
+<li>id - SPI id</li>
+<li>data - 数据缓冲区地址</li>
+<li>size - 发送的数据长度</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>
+<ul>
+<li>BK_OK: 成功</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_NOT_INIT: SPI 驱动未初始化</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_INVALID_ID: SPI id 无效</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_ID_NOT_INIT: SPI id 未初始化</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>others: 其它错误.</li>
+</ul>
+</li>
+</ul>
+<h3 id="bk_spi_read_bytesspi_id_t-id-void-data-uint32_t-size"><h3 id="section48"><span class="bordered-title">bk_spi_read_bytes(spi_id_t id, void *data, uint32_t size)</span></h3><a class="headerlink" href="#bk_spi_read_bytesspi_id_t-id-void-data-uint32_t-size" title="Permanent link">¶</a></h3>
+<h4 id="function-spi_3">Function: 从SPI缓冲区读取字节<a class="headerlink" href="#function-spi_3" title="Permanent link">¶</a></h4>
+<h4 id="param_12">param:<a class="headerlink" href="#param_12" title="Permanent link">¶</a></h4>
+<ul>
+<li>id - SPI id</li>
+<li>data - 指向缓冲区的指针</li>
+<li>size - 读取的字节长度</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>
+<ul>
+<li>BK_OK: 成功</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_NOT_INIT: SPI 驱动未初始化</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_INVALID_ID: SPI id 无效</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_ID_NOT_INIT: SPI id 未初始化</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>others: 其它错误.</li>
+</ul>
+</li>
+</ul>
+<h3 id="bk_spi_transmitspi_id_t-id-const-void-tx_data-uint32_t-tx_size-void-rx_data-uint32_t-rx_size"><h3 id="section49"><span class="bordered-title">bk_spi_transmit(spi_id_t id, const void <em>tx_data, uint32_t tx_size, void </em>rx_data, uint32_t rx_size)</span></h3><a class="headerlink" href="#bk_spi_transmitspi_id_t-id-const-void-tx_data-uint32_t-tx_size-void-rx_data-uint32_t-rx_size" title="Permanent link">¶</a></h3>
+<h4 id="function-spi_4">Function: SPI 写入/读取多个字节<a class="headerlink" href="#function-spi_4" title="Permanent link">¶</a></h4>
+<h4 id="param_13">param:<a class="headerlink" href="#param_13" title="Permanent link">¶</a></h4>
+<ul>
+<li>id - SPI id</li>
+<li>tx_data: 写入数据缓冲区的指针</li>
+<li>tx_size: 要写入的数据长度</li>
+<li>rx_data: 接收数据缓冲区的指针</li>
+<li>rx_size: 要读取的数据长度</li>
+</ul>
+<div class="subtitle-box">
+return:
+</div>
+<ul>
+<li>
+<ul>
+<li>BK_OK: 成功</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_NOT_INIT: SPI 驱动未初始化</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_INVALID_ID: SPI id 无效</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>BK_ERR_SPI_ID_NOT_INIT: SPI id 未初始化</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>others: 其它错误.</li>
+</ul>
+</li>
+</ul>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://s1.imagehub.cc/images/2024/02/02/bb9ee71b03ee7a3b87caad5cc4bcebff.jpeg" rel="noopener" target="_blank" title="Wechat">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154m-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4m-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2M563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4m-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6m107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6" fill="currentColor"></path></svg>
+</a>
+<a class="md-social__link" href="https://t.me/wecowin" rel="noopener" target="_blank" title="telegram">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z" fill="currentColor"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+<script src="../../../js/extra.js"></script>
+<script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>
+</body>
+</html>

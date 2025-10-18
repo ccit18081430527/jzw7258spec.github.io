@@ -15,7 +15,7 @@ h2 {
   color: rgb(95, 102, 224);
 }
 h3 {
-  color: rgb(57, 97, 125);
+  color: rgb(108, 192, 252);
 }
 /* h1, h2, h3 {
   color: #2c3e50;
@@ -89,11 +89,19 @@ h3 {
   font-size: 1.5rem;
   color: #5a21f6;
 }
+.markdown-content h3 {
+  font-size: 1.5rem;
+  color: #494357;
+}
 
-/* .md-header {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-   }
-   /* 代码块样式 */
-/* .highlight .n, .highlight .p {
-    color: #d63384;
-  } */ 
+.subtitle-box {
+  border: 1px solid #34474b; /* 边框 */
+  padding: 5px; /* 内边距 */
+  margin-bottom: 7px; /* 外边距 */
+  background-color: #75aab3; /* 背景色 */
+  display: inline-block;
+}
+.bordered-title {
+  border-bottom: 10px solid #82aeba; /* 底部边框，可以根据需要调整颜色和宽度 */
+  display: inline-block; /* 确保边框只围绕标题文字 */
+}

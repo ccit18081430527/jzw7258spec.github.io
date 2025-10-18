@@ -5,9 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="工欲善其事,必先利其器" name="description"/>
 <meta content="技术文档团队" name="author"/>
 <link href="https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" rel="canonical"/>
-<link href="../03-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/" rel="prev"/>
+<link href="../03-05OS%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83/" rel="prev"/>
 <link href="../03-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" rel="next"/>
 <link href="../../../../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.16" name="generator"/>
@@ -22,7 +23,7 @@
 <link href="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="slate" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -35,7 +36,7 @@
 </div>
 <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="JZW软件规格书" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="JZW软件规格书">
 <img alt="logo" src="../../../../img/favicon.ico"/>
@@ -60,7 +61,18 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="关闭自动模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="关闭自动模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"></path></svg>
+</label>
+<input aria-label="切换至夜间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="切换至夜间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+<input aria-label="切换至日间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="切换至日间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
@@ -110,8 +122,6 @@
 </div>
 </div>
 </nav>
-</header>
-<div class="md-container" data-md-component="container">
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
@@ -131,6 +141,8 @@
           
   
   
+    
+  
   JZW7258
 
         </a>
@@ -147,9 +159,11 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
+<a class="md-tabs__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-01API%E8%AF%B4%E6%98%8E/">
           
   
+  
+    
   
   相关资料
 
@@ -158,6 +172,8 @@
 </ul>
 </div>
 </nav>
+</header>
+<div class="md-container" data-md-component="container">
 <main class="md-main" data-md-component="main">
 <div class="md-main__inner md-grid">
 <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
@@ -214,7 +230,7 @@
 <input checked="" class="md-nav__toggle md-toggle " id="__nav_2_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
 <span class="md-ellipsis">
-    系统设计
+    开发指南
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -222,7 +238,7 @@
 <nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
-            系统设计
+            开发指南
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -237,6 +253,14 @@
 <a class="md-nav__link" href="../03-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/">
 <span class="md-ellipsis">
     硬件接口开发
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-05OS%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83/">
+<span class="md-ellipsis">
+    OS相关参考
     
   </span>
 </a>
@@ -309,7 +333,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle " id="__nav_4" type="checkbox"/>
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     相关资料
@@ -323,16 +347,42 @@
             相关资料
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
 <span class="md-ellipsis">
-    API
+    JZW7258API
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            JZW7258API
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-01API%E8%AF%B4%E6%98%8E/">
+<span class="md-ellipsis">
+    新建工程
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-02PDF%E4%B8%8B%E8%BD%BD/">
+<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-02%E5%A4%96%E8%AE%BE%E4%BD%BF%E7%94%A8/">
+<span class="md-ellipsis">
+    外设使用
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-03PDF%E4%B8%8B%E8%BD%BD/">
 <span class="md-ellipsis">
     PDF下载
     
@@ -419,6 +469,7 @@
 <p>---------------------------------------------------end----------------------------------------------------------</p>
 </article>
 </div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
@@ -446,7 +497,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
 <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
 <script src="../../../../js/extra.js"></script>
 <script src="http://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/meremaid.min.js"></script>

@@ -2,42 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/01-01IDK%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/02-01%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-01%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%88%86%E5%B1%82/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-02%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-03%E5%B1%8F%E5%B9%95%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-04%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/JZW7258/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/03-05OS%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83/</loc>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E5%85%B6%E5%AE%83/%E5%85%B6%E5%AE%83MCU/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
-         <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-01API%E8%AF%B4%E6%98%8E/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-01API%E8%AF%B4%E6%98%8E/</loc>
+         <lastmod>2025-10-18</lastmod>
     </url>
     <url>
-         <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/03-02PDF%E4%B8%8B%E8%BD%BD/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-02%E5%A4%96%E8%AE%BE%E4%BD%BF%E7%94%A8/</loc>
+         <lastmod>2025-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/cit18081430527/jzw7258spec.github.io/sections/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/11-03PDF%E4%B8%8B%E8%BD%BD/</loc>
+         <lastmod>2025-10-18</lastmod>
     </url>
 </urlset>
